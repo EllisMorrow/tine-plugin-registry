@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "manifest identity and deterministic-check consistency",
+      "literal semantic-color values and host execution boundary",
+      "bounded presentation presets",
+      "malicious or deceptive behavior",
+      "manifest/source mismatch",
+      "dependency and build-script risk",
+      "denial-of-service potential",
+      "hidden data channels and external references",
+      "license and provenance",
+      "source-supported claims",
+      "graph transformation safety and protocol abuse"
+    ],
+    "disposition": "pass",
+    "findings": [
+      {
+        "evidence": "theme.json contains semantic color mappings, three named presentation presets, metadata, and screenshot URLs; it contains no CSS, JavaScript, commands, dependencies, or graph-query definitions.",
+        "impact": "The package cannot execute code or directly inspect, mutate, or scan graph data under the stated host model.",
+        "severity": "info",
+        "title": "Theme remains within the inert host boundary"
+      },
+      {
+        "evidence": "portedFrom pins notnote revision f7979d859e946386557516998fda12b025058bee, identifies substa and MIT, and the packaged LICENSE matches the supplied upstream LICENSE.",
+        "impact": "No material license or provenance mismatch is apparent from the supplied bundle.",
+        "severity": "info",
+        "title": "Provenance and license declarations are consistent"
+      },
+      {
+        "evidence": "README.md states that the light accent was darkened, while upstream theme-config.css uses #3f7fba and the manifest uses #3b78ae. docs/api-gap.md explicitly limits the compact summary to the loaded Today journal and disclaims graph-wide equivalence.",
+        "impact": "The package does not deceptively claim exact visual or behavioral parity with upstream.",
+        "severity": "info",
+        "title": "Claims accurately describe the intentional port differences"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The package is an inert semantic-color theme whose manifest contains literal hexadecimal colors and bounded host-owned presentation presets. The supplied deterministic report passed with no warnings, and the manifest identity and hash agree with that report. The declared notnote provenance, pinned revision, MIT licensing, palette, typography, journal-header styling, and documented task-summary limitation are supported by the supplied upstream materials. No executable theme code, dependencies, build hooks, graph access, protocol operations, or unsafe transformations are present.",
+    "uncertain": false
+  },
+  "checker": {
+    "checkedAt": "2026-08-28T17:41:17.180Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "e074b5415ab3b4aa58946b458d981af4e383911f7fb9915720275c640ff8b804",
+      "sourceCommit": "a2e25dc50b49a5b5587aa3a39cda2482321474de"
+    },
+    "risk": "low",
+    "sha256": "e074b5415ab3b4aa58946b458d981af4e383911f7fb9915720275c640ff8b804",
+    "status": "passed",
+    "theme": {
+      "id": "org.tine.theme.notnote",
+      "name": "notnote",
+      "version": "1.1.0"
+    },
+    "warnings": []
+  },
+  "commitVerified": "a2e25dc50b49a5b5587aa3a39cda2482321474de",
+  "disposition": "publish",
+  "format": "tine-package-audit-result/v1",
+  "submission": {
+    "commit": "a2e25dc50b49a5b5587aa3a39cda2482321474de",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "org.tine.theme.notnote",
+    "repository": "https://github.com/martinkoutecky/tine-theme-notnote",
+    "schemaVersion": 2,
+    "version": "1.1.0"
+  }
+}
