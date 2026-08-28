@@ -120,7 +120,20 @@ def locked_sdk_source(plugin_root: pathlib.Path, temp: pathlib.Path, manifest: d
     return sources
 
 
-def pinned_port_source(manifest: dict, temp: pathlib.Path) -> list[tuple[str, pathlib.Path]]:
+def port_evidence_path_relevant(path: pathlib.Path, kind: str) -> bool:
+    """Keep theme evidence focused on authored styling, not whole application bundles."""
+    name = path.name.lower()
+    metadata = name in {"license", "copying", "notice", "manifest.json", "package.json"} or name.startswith("readme")
+    if metadata:
+        return True
+    if kind == "theme":
+        if ".bundle." in name or ".min." in name:
+            return False
+        return path.suffix.lower() in {".css", ".scss", ".sass", ".less"}
+    return path.suffix.lower() in {".css", ".scss", ".js", ".ts", ".tsx"}
+
+
+def pinned_port_source(manifest: dict, temp: pathlib.Path, kind: str) -> list[tuple[str, pathlib.Path]]:
     """Fetch declared port evidence as inert review input; never build or execute it."""
     port = manifest.get("portedFrom")
     if not isinstance(port, dict):
@@ -147,13 +160,7 @@ def pinned_port_source(manifest: dict, temp: pathlib.Path) -> list[tuple[str, pa
     for path in sorted(checkout.rglob("*")):
         if path.is_symlink() or not path.is_file() or ".git" in path.relative_to(checkout).parts:
             continue
-        name = path.name.lower()
-        relevant = (
-            path.suffix.lower() in {".css", ".scss", ".js", ".ts", ".tsx"}
-            or name in {"license", "copying", "notice", "manifest.json", "package.json"}
-            or name.startswith("readme")
-        )
-        if not relevant:
+        if not port_evidence_path_relevant(path, kind):
             continue
         size = path.stat().st_size
         if copied_bytes + size > 400_000:
@@ -202,7 +209,7 @@ def audit(submission_path: pathlib.Path, tine: pathlib.Path, image: str, max_sou
                 "buildNetwork": "not-applicable",
                 "manifestSha256": checker.get("sha256"),
             }
-            port_sources = pinned_port_source(manifest, temp_path)
+            port_sources = pinned_port_source(manifest, temp_path, "theme")
             ai = review(
                 plugin_root, checker,
                 pathlib.Path(__file__).parents[1] / "schemas" / "audit.schema.json",
@@ -268,7 +275,7 @@ def audit(submission_path: pathlib.Path, tine: pathlib.Path, image: str, max_sou
         }
         extra_sources = [
             *locked_sdk_source(plugin_root, temp_path, manifest),
-            *pinned_port_source(manifest, temp_path),
+            *pinned_port_source(manifest, temp_path, "plugin"),
         ]
         ai = review(
             plugin_root,
