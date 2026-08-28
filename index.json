@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T21:46:03.449860+00:00",
+  "generatedAt": "2026-08-28T16:52:11.216225+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -243,6 +243,36 @@
           ],
           "publishedAt": "2026-07-14T21:46:01.517754+00:00",
           "version": "1.0.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A color-only Tine port of notnote's paper-and-graphite palette. Editorial typography, spacing, journal layout, icons, and task controls are intentionally excluded.",
+      "id": "org.tine.theme.notnote",
+      "license": "MIT",
+      "name": "notnote Colors",
+      "source": "https://github.com/martinkoutecky/tine-theme-notnote",
+      "versions": [
+        {
+          "apiVersion": "0.1",
+          "audit": {
+            "automatedDisposition": "publish",
+            "checkedAt": "2026-08-28T16:51:41.994Z",
+            "manualApproval": false,
+            "risk": "low",
+            "sha256": "cf7c4255eeeb2cb228967ac52352dfd8dfe3903dff6f65b274389e9a7b5d8761",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/org.tine.theme.notnote/1.0.0.json"
+          },
+          "manifestSha256": "a2392fa0d3b294071b043c104e53fff07ac9225913eaf1a8ecbd6d17ebacb5b5",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/org.tine.theme.notnote/1.0.0/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-08-28T16:52:11.216215+00:00",
+          "version": "1.0.0"
         }
       ]
     },

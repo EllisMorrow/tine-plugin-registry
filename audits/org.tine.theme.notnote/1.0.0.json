@@ -1,0 +1,67 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Malicious intent and deceptive behavior",
+      "Manifest and source consistency",
+      "Literal-color allowlist compatibility",
+      "Dependencies and build-script risk",
+      "Denial of service",
+      "Hidden data channels and remote references",
+      "License and provenance",
+      "Support for documented claims",
+      "Graph transformation safety",
+      "Protocol abuse"
+    ],
+    "disposition": "pass",
+    "findings": [
+      {
+        "evidence": "README.md says the light accent was darkened for link contrast; theme.json uses #3b78ae instead of the upstream theme-config.css light accent #3f7fba.",
+        "impact": "This is a transparent and reasonable source-derived modification, not a deceptive source mismatch.",
+        "severity": "info",
+        "title": "Disclosed palette adaptation"
+      },
+      {
+        "evidence": "theme.json lists two HTTPS raw.githubusercontent.com screenshot URLs pinned to commit a555114d24b5b9f9a911907fb8683da75be33e8d.",
+        "impact": "These URLs do not execute code or affect theme colors; they may cause ordinary image retrieval only if the marketplace chooses to display them.",
+        "severity": "info",
+        "title": "Remote screenshot references are presentation metadata"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The package is an inert, color-only theme whose manifest contains only allowlisted literal hexadecimal colors. The deterministic check passed with no warnings, the manifest identity matches the report, the documented limitations accurately distinguish the theme from the fuller upstream UI, and the included MIT license matches the declared pinned source. No executable package code, dependencies, build scripts, graph transformations, protocol behavior, denial-of-service mechanism, or covert data channel is present in the installable theme.",
+    "uncertain": false
+  },
+  "checker": {
+    "checkedAt": "2026-08-28T16:51:41.994Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "b89a624b71f590270b0fa326024b0448a463325a5a50efc7a21fdb873c363af8",
+      "sourceCommit": "a257eae4ed44a8d258857718b53282864d1b90b4"
+    },
+    "risk": "low",
+    "sha256": "b89a624b71f590270b0fa326024b0448a463325a5a50efc7a21fdb873c363af8",
+    "status": "passed",
+    "theme": {
+      "id": "org.tine.theme.notnote",
+      "name": "notnote Colors",
+      "version": "1.0.0"
+    },
+    "warnings": []
+  },
+  "commitVerified": "a257eae4ed44a8d258857718b53282864d1b90b4",
+  "disposition": "publish",
+  "format": "tine-package-audit-result/v1",
+  "submission": {
+    "commit": "a257eae4ed44a8d258857718b53282864d1b90b4",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "org.tine.theme.notnote",
+    "repository": "https://github.com/martinkoutecky/tine-theme-notnote",
+    "schemaVersion": 2,
+    "version": "1.0.0"
+  }
+}
