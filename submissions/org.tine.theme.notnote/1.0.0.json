@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "org.tine.theme.notnote",
+  "version": "1.0.0",
+  "repository": "https://github.com/martinkoutecky/tine-theme-notnote",
+  "commit": "a257eae4ed44a8d258857718b53282864d1b90b4",
+  "manifestPath": "theme.json"
+}
