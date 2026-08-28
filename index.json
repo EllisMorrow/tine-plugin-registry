@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T17:41:59.009269+00:00",
+  "generatedAt": "2026-08-28T17:44:10.012907+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -248,10 +248,10 @@
     },
     {
       "aiDevelopment": "primary",
-      "description": "A color-only Tine port of notnote's paper-and-graphite palette. Editorial typography, spacing, journal layout, icons, and task controls are intentionally excluded.",
+      "description": "An editorial Tine port of notnote with its paper-and-graphite palette, serif reading type, centered Today header, and compact task summary.",
       "id": "org.tine.theme.notnote",
       "license": "MIT",
-      "name": "notnote Colors",
+      "name": "notnote",
       "source": "https://github.com/martinkoutecky/tine-theme-notnote",
       "versions": [
         {
