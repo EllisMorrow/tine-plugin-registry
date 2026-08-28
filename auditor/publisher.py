@@ -162,7 +162,8 @@ def publish(
         "source": manifest["source"], "license": manifest["license"],
         "aiDevelopment": manifest.get("aiDevelopment", "none"), "versions": [],
     })
-    if not any(candidate["version"] == version for candidate in item["versions"]):
+    is_new_version = not any(candidate["version"] == version for candidate in item["versions"])
+    if is_new_version:
         base = f"https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main"
         version_entry = {
             "version": version, "apiVersion": manifest["apiVersion"],
@@ -189,6 +190,16 @@ def publish(
         else:
             version_entry["modes"] = sorted(manifest["modes"].keys())
         item["versions"].append(version_entry)
+    # Catalogue metadata follows the most recently published version. Replaying
+    # an older immutable audit must not roll the public listing back.
+    if is_new_version or item["versions"][-1]["version"] == version:
+        item.update({
+            "name": manifest["name"],
+            "description": manifest["description"],
+            "source": manifest["source"],
+            "license": manifest["license"],
+            "aiDevelopment": manifest.get("aiDevelopment", "none"),
+        })
     index[collection_name] = sorted(collection.values(), key=lambda candidate: candidate["id"])
     index.setdefault("plugins", [])
     index.setdefault("themes", [])

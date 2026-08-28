@@ -161,6 +161,32 @@ class PublisherSecurityTests(unittest.TestCase):
         self.assertNotIn("wasmUrl", version)
         self.assertTrue((self.repo / "themes" / manifest["id"] / "1.0.0" / "theme.json").is_file())
 
+    def test_newest_publication_refreshes_catalogue_metadata_without_old_replay_rollback(self):
+        first = envelope()
+        first_path = self.write_envelope(first)
+        publish(first_path, self.repo, self.key)
+
+        second = envelope()
+        second["submission"]["version"] = "0.2.0"
+        second["submission"]["commit"] = "b" * 40
+        second["commitVerified"] = "b" * 40
+        second["package"]["manifest"]["version"] = "0.2.0"
+        second["package"]["manifest"]["name"] = "Renamed example"
+        second["package"]["manifest"]["description"] = "Expanded example"
+        second["package"]["manifestSha256"] = hashlib.sha256(
+            canonical(second["package"]["manifest"])
+        ).hexdigest()
+        publish(self.write_envelope(second), self.repo, self.key)
+
+        item = json.loads((self.repo / "index.json").read_text())["plugins"][0]
+        self.assertEqual(item["name"], "Renamed example")
+        self.assertEqual(item["description"], "Expanded example")
+
+        publish(first_path, self.repo, self.key)
+        item = json.loads((self.repo / "index.json").read_text())["plugins"][0]
+        self.assertEqual(item["name"], "Renamed example")
+        self.assertEqual(item["description"], "Expanded example")
+
     def test_manual_approval_is_persisted_for_idempotent_push_retries(self):
         value = envelope()
         value["disposition"] = "quarantine"
