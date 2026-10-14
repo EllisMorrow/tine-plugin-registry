@@ -111,8 +111,13 @@ def locked_sdk_source(plugin_root: pathlib.Path, temp: pathlib.Path, manifest: d
         for relative in [
             "src/plugins/manager.ts", "src/plugins/manifest.ts",
             "src/components/Block.tsx", "src/styles/app.css",
+            # Setting-to-style boundary (plugin API 0.3): validation and row styling.
+            "src/components/block/rowChrome.tsx", "src/plugins/settings.ts",
+            "src/plugins/color.mjs",
         ]:
             source = checkout / relative
+            if not source.is_file():
+                continue  # older locked revisions predate some of these files
             destination = evidence / relative
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, destination)
