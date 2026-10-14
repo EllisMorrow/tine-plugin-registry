@@ -8,7 +8,7 @@ import pathlib
 import subprocess
 import tempfile
 
-TEXT_SUFFIXES = {".rs", ".js", ".ts", ".tsx", ".toml", ".json", ".md", ".lock", ".yml", ".yaml", ".txt", ".css", ".scss"}
+TEXT_SUFFIXES = {".rs", ".js", ".mjs", ".ts", ".mts", ".tsx", ".toml", ".json", ".md", ".lock", ".yml", ".yaml", ".txt", ".css", ".scss"}
 TEXT_NAMES = {"LICENSE", "COPYING", "NOTICE"}
 SKIP_PARTS = {".git", "target", "node_modules", "vendor"}
 
