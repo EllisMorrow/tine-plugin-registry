@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T17:44:10.012907+00:00",
+  "generatedAt": "2026-10-14T14:42:01.958348+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -61,6 +61,33 @@
           "sha256": "ef39dbfa30c2703b564d0456b043c363c0efd4340a690a1397b1cd229d01beaa",
           "version": "0.2.0",
           "wasmUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/packages/page.tine.bullet-threading/0.2.0/plugin.wasm"
+        },
+        {
+          "apiVersion": "0.3",
+          "audit": {
+            "automatedDisposition": "publish",
+            "checkedAt": "2026-10-14T14:40:30.196Z",
+            "manualApproval": false,
+            "risk": "low",
+            "sha256": "354c2fd56498c6d86e44d64efa00fc93017e07d4f0c86ae72b5fdad56f3514c0",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/page.tine.bullet-threading/0.3.0.json"
+          },
+          "capabilities": [
+            "block-decorations.register",
+            "settings.read"
+          ],
+          "manifestSha256": "2dad65075fc9b39aa76560ec1589f6cf5715b3a36974e357cc84280a356b9d6f",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/packages/page.tine.bullet-threading/0.3.0/manifest.json",
+          "platforms": [
+            "desktop",
+            "android",
+            "ios"
+          ],
+          "publishedAt": "2026-10-14T14:42:01.958327+00:00",
+          "sha256": "5b458bc04f9d0d439cc079b618180dc2b9c76cb025f3e38c7f31e0cbc97331b3",
+          "version": "0.3.0",
+          "wasmUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/packages/page.tine.bullet-threading/0.3.0/plugin.wasm"
         }
       ]
     },

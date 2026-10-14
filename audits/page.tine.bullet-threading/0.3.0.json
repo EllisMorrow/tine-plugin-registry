@@ -1,0 +1,94 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Malicious intent and deceptive behavior",
+      "Manifest, source, and documentation consistency",
+      "Capabilities and hidden data channels",
+      "Graph transformations and protocol abuse",
+      "Memory, message, and execution limits",
+      "Settings validation and CSS injection",
+      "Dependencies and build scripts",
+      "Artifact provenance and licensing",
+      "Behavioral-port relationship"
+    ],
+    "disposition": "pass",
+    "findings": [],
+    "schemaVersion": 1,
+    "summary": "No malicious behavior or material manifest/source mismatch found. The guest returns no effects; host-owned rendering applies bounded settings and literal colors. Reported artifact provenance and memory-only imports support the declared capability limits. Upstream network fetching and npm scripts are absent from the Tine implementation.",
+    "uncertain": false
+  },
+  "checker": {
+    "checkedAt": "2026-10-14T14:40:30.196Z",
+    "errors": [],
+    "format": "tine-plugin-check/v1",
+    "plugin": {
+      "id": "page.tine.bullet-threading",
+      "name": "Bullet threading",
+      "version": "0.3.0"
+    },
+    "portGap": {
+      "blockers": 0,
+      "recommendation": null,
+      "status": "absent"
+    },
+    "provenance": {
+      "artifactBuiltFromThatCheckout": true,
+      "artifactSha256": "5b458bc04f9d0d439cc079b618180dc2b9c76cb025f3e38c7f31e0cbc97331b3",
+      "buildNetwork": "none",
+      "dependencyFetchHadNoCredentials": true,
+      "sourceCommit": "3c5974d2b0f7f448985919a3fc0bb0d853f9bb08"
+    },
+    "risk": "low",
+    "status": "passed",
+    "warnings": [],
+    "wasm": {
+      "bytes": 147894,
+      "exports": [
+        {
+          "kind": "function",
+          "name": "tine_alloc"
+        },
+        {
+          "kind": "function",
+          "name": "tine_handle"
+        },
+        {
+          "kind": "function",
+          "name": "tine_result_len"
+        },
+        {
+          "kind": "global",
+          "name": "__data_end"
+        },
+        {
+          "kind": "global",
+          "name": "__heap_base"
+        }
+      ],
+      "imports": [
+        {
+          "kind": "memory",
+          "module": "env",
+          "name": "memory"
+        }
+      ],
+      "sha256": "5b458bc04f9d0d439cc079b618180dc2b9c76cb025f3e38c7f31e0cbc97331b3"
+    }
+  },
+  "commitVerified": "3c5974d2b0f7f448985919a3fc0bb0d853f9bb08",
+  "disposition": "publish",
+  "format": "tine-plugin-audit-result/v1",
+  "pullRequest": {
+    "head": "a771229444aaeeed190ef3b86deb07c17d209e23",
+    "number": 2
+  },
+  "submission": {
+    "commit": "3c5974d2b0f7f448985919a3fc0bb0d853f9bb08",
+    "kind": "plugin",
+    "manifestPath": "manifest.json",
+    "packageId": "page.tine.bullet-threading",
+    "repository": "https://github.com/martinkoutecky/tine-plugin-bullet-threading",
+    "schemaVersion": 2,
+    "version": "0.3.0"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.3",
+  "author": "Martin Koutecký",
+  "capabilities": [
+    "block-decorations.register",
+    "settings.read"
+  ],
+  "contributions": {
+    "blockDecorations": [
+      {
+        "id": "thread-lines",
+        "kind": "thread-lines"
+      }
+    ]
+  },
+  "description": "Draw subtle elbow connectors from parent bullets to their children.",
+  "entry": "target/wasm32-unknown-unknown/release/tine_plugin_bullet_threading.wasm",
+  "id": "page.tine.bullet-threading",
+  "license": "MIT",
+  "name": "Bullet threading",
+  "platforms": [
+    "desktop",
+    "android",
+    "ios"
+  ],
+  "portedFrom": {
+    "authors": [
+      "Peng Xiao"
+    ],
+    "ecosystem": "logseq",
+    "license": "MIT",
+    "name": "Logseq Plugin Bullet Threading",
+    "relationship": "behavioral-port",
+    "revision": "391c1059e18b2bec01e84019447148318534bc2a",
+    "source": "https://github.com/pengx17/logseq-plugin-bullet-threading"
+  },
+  "schemaVersion": 1,
+  "settings": [
+    {
+      "choices": [
+        {
+          "label": "All nested outlines",
+          "value": "all"
+        },
+        {
+          "label": "Active ancestry only",
+          "value": "active"
+        }
+      ],
+      "default": "all",
+      "description": "Draw every nested thread or only the ancestry of the focused block.",
+      "key": "display",
+      "label": "Thread display",
+      "type": "enum"
+    },
+    {
+      "choices": [
+        {
+          "label": "Subtle",
+          "value": "subtle"
+        },
+        {
+          "label": "Standard",
+          "value": "standard"
+        }
+      ],
+      "default": "subtle",
+      "description": "Choose a restrained connector strength.",
+      "key": "intensity",
+      "label": "Intensity",
+      "type": "enum"
+    },
+    {
+      "default": 1,
+      "description": "Thread line thickness in pixels. Zero hides the lines.",
+      "key": "thickness",
+      "label": "Line thickness",
+      "max": 10,
+      "min": 0,
+      "step": 0.5,
+      "type": "number"
+    },
+    {
+      "default": "",
+      "description": "Leave empty to use the current theme accent, or choose a custom color.",
+      "key": "color",
+      "label": "Thread color",
+      "type": "color"
+    },
+    {
+      "default": false,
+      "description": "Use a repeating theme-aware palette for the active ancestry.",
+      "key": "color-by-level",
+      "label": "Color by hierarchy level",
+      "type": "boolean"
+    }
+  ],
+  "source": "https://github.com/martinkoutecky/tine-plugin-bullet-threading",
+  "version": "0.3.0"
+}
