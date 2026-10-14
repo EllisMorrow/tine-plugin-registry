@@ -115,7 +115,8 @@ def locked_sdk_source(plugin_root: pathlib.Path, temp: pathlib.Path, manifest: d
             "src/components/block/rowChrome.tsx", "src/plugins/settings.ts",
             "src/plugins/color.mjs",
             # Guest runtime boundary: allocation/ownership and message limits.
-            "src/plugins/runtime.ts", "src/plugins/runtime.worker.ts", "src/plugins/protocol.ts",
+            "src/plugins/runtime.ts", "src/plugins/runtime.worker.ts", "src/plugins/guest.ts",
+            "src/plugins/protocol.ts",
         ]:
             source = checkout / relative
             if not source.is_file():
