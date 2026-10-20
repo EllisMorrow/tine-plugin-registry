@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "plugin",
+  "packageId": "page.tine.table-formulas",
+  "version": "0.1.0",
+  "repository": "https://github.com/martinkoutecky/tine-plugin-table-formulas",
+  "commit": "4b2374b4e68308f6e8b523c08512c445919840c2",
+  "manifestPath": "manifest.json"
+}
