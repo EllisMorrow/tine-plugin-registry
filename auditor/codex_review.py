@@ -2,6 +2,7 @@
 """No-tools Codex review. The checkout is converted to bounded prompt data first."""
 
 from __future__ import annotations
+import getpass
 import json
 import os
 import pathlib
@@ -89,6 +90,12 @@ UNTRUSTED SOURCE BUNDLE:
             "HOME": os.environ.get("HOME", str(pathlib.Path.home())),
             "LANG": "C.UTF-8",
         }
+        # --ignore-user-config drops config.toml's sqlite_home, so without this env
+        # var codex rebuilds its multi-GB state index in CODEX_HOME (~/.codex, NFS
+        # with a 15G quota). That filled the home quota on 2026-10-15 and 10-20.
+        sqlite_home = os.environ.get("CODEX_SQLITE_HOME") or f"/aux/{getpass.getuser()}/ai-state/codex/sqlite"
+        if pathlib.Path(sqlite_home).is_dir():
+            env["CODEX_SQLITE_HOME"] = sqlite_home
         # Codex's interactive transcript includes the complete hostile source
         # prompt. Never copy that into an unattended service log: the signed JSON
         # output is the only review artifact the publisher consumes.
