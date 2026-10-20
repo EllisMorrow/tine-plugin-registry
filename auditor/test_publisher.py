@@ -196,6 +196,25 @@ class PublisherSecurityTests(unittest.TestCase):
         publish(path, self.repo, self.key, approve_quarantine=True, approval_note="reviewed")
         self.assertEqual(json.loads(path.read_text())["manualApproval"], first)
 
+    def test_manual_approval_records_the_named_approver(self):
+        value = envelope()
+        value["disposition"] = "quarantine"
+        path = self.write_envelope(value)
+        publish(path, self.repo, self.key, approve_quarantine=True, approval_note="reviewed",
+                approved_by="Claude (working on Martin's behalf)")
+        self.assertEqual(json.loads(path.read_text())["manualApproval"]["by"], "Claude (working on Martin's behalf)")
+        # A retry by a different approver must not rewrite the stored, immutable approval.
+        with self.assertRaises(RuntimeError):
+            publish(path, self.repo, self.key, approve_quarantine=True, approval_note="reviewed")
+
+    def test_manual_approval_rejects_an_unknown_approver(self):
+        value = envelope()
+        value["disposition"] = "quarantine"
+        path = self.write_envelope(value)
+        with self.assertRaises(RuntimeError):
+            publish(path, self.repo, self.key, approve_quarantine=True, approval_note="reviewed", approved_by="Mallory")
+        self.assertNotIn("manualApproval", json.loads(path.read_text()))
+
 
 if __name__ == "__main__":
     unittest.main()

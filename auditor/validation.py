@@ -4,6 +4,13 @@ from __future__ import annotations
 import pathlib
 import re
 
+# Who may approve a quarantined version (POLICY.md: "a named manual approval").
+# Each acts on Martin's explicit authority for that package; the name is recorded.
+MANUAL_APPROVERS = (
+    "Sol (working on Martin's behalf)",
+    "Claude (working on Martin's behalf)",
+)
+
 ID = re.compile(r"^[a-z0-9](?:[a-z0-9.-]{1,62}[a-z0-9])$")
 VERSION = re.compile(r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?$")
 REPOSITORY = re.compile(r"^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(?:\.git)?$")
@@ -115,7 +122,7 @@ def validate_publishable_audit(envelope: object, submission: dict) -> dict:
     approval = envelope.get("manualApproval")
     if approval is not None and (
         not isinstance(approval, dict)
-        or approval.get("by") != "Sol (working on Martin's behalf)"
+        or approval.get("by") not in MANUAL_APPROVERS
         or not isinstance(approval.get("note"), str)
         or not approval["note"]
         or not isinstance(approval.get("approvedAt"), str)

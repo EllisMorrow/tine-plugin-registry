@@ -13,7 +13,7 @@ import tempfile
 import tomllib
 from github_app import github_json, installation_token
 from validation import (
-    submission_id, submission_kind, validate_manifest_identity,
+    MANUAL_APPROVERS, submission_id, submission_kind, validate_manifest_identity,
     validate_publishable_audit, validate_submission,
 )
 
@@ -91,11 +91,14 @@ def publish(
     key: pathlib.Path,
     approve_quarantine: bool = False,
     approval_note: str = "",
+    approved_by: str = MANUAL_APPROVERS[0],
 ) -> tuple[str, str, int | None]:
     envelope = json.loads(envelope_path.read_text())
     pr = envelope.get("pullRequest", {}).get("number")
     disposition = envelope.get("disposition", "quarantine")
     if approve_quarantine and disposition == "quarantine":
+        if approved_by not in MANUAL_APPROVERS:
+            raise RuntimeError("unknown manual approver")
         checker = envelope.get("checker", {})
         ai = envelope.get("aiReview", {})
         if checker.get("status") != "passed" or ai.get("disposition") != "pass" or ai.get("uncertain"):
@@ -104,14 +107,14 @@ def publish(
         if existing_approval is not None:
             if (
                 not isinstance(existing_approval, dict)
-                or existing_approval.get("by") != "Sol (working on Martin's behalf)"
+                or existing_approval.get("by") != approved_by
                 or existing_approval.get("note") != approval_note
                 or not isinstance(existing_approval.get("approvedAt"), str)
             ):
                 raise RuntimeError("stored manual approval does not match this approval request")
         else:
             envelope["manualApproval"] = {
-                "by": "Sol (working on Martin's behalf)",
+                "by": approved_by,
                 "note": approval_note,
                 "approvedAt": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             }
@@ -219,7 +222,10 @@ def main() -> None:
     parser.add_argument("--config", type=pathlib.Path, required=True)
     parser.add_argument("--approve-quarantine", action="store_true")
     parser.add_argument("--approval-note", default="")
+    parser.add_argument("--approved-by", choices=MANUAL_APPROVERS, help="required with --approve-quarantine")
     args = parser.parse_args()
+    if args.approve_quarantine and not args.approved_by:
+        parser.error("--approve-quarantine requires --approved-by")
     config = tomllib.loads(args.config.read_text())
     repo = pathlib.Path(config["registry_checkout"])
     key = private_file(pathlib.Path(config["signing_key"]), "registry signing key")
@@ -229,6 +235,7 @@ def main() -> None:
         key,
         approve_quarantine=args.approve_quarantine,
         approval_note=args.approval_note,
+        approved_by=args.approved_by or MANUAL_APPROVERS[0],
     )
     if disposition == "published":
         git(repo, ["add", "index.json", "index.json.sig", "packages", "themes", "audits"])
