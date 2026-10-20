@@ -215,6 +215,58 @@ class PublisherSecurityTests(unittest.TestCase):
             publish(path, self.repo, self.key, approve_quarantine=True, approval_note="reviewed", approved_by="Mallory")
         self.assertNotIn("manualApproval", json.loads(path.read_text()))
 
+    def uncertain_envelope(self, *severities):
+        value = envelope()
+        value["disposition"] = "quarantine"
+        value["aiReview"].update({"disposition": "quarantine", "uncertain": True, "findings": [
+            {"severity": sev, "title": f"finding {i}", "impact": "structural"} for i, sev in enumerate(severities)
+        ]})
+        return value
+
+    def test_uncertain_review_needs_named_acceptance(self):
+        path = self.write_envelope(self.uncertain_envelope("medium", "info"))
+        with self.assertRaises(RuntimeError):
+            publish(path, self.repo, self.key, approve_quarantine=True, approval_note="reviewed")
+        self.assertNotIn("manualApproval", json.loads(path.read_text()))
+
+    def test_named_acceptance_of_every_medium_finding_publishes_and_is_recorded(self):
+        path = self.write_envelope(self.uncertain_envelope("medium", "medium", "low"))
+        status, _, _ = publish(path, self.repo, self.key, approve_quarantine=True, approval_note="structural only",
+                               approved_by="Claude (working on Martin's behalf)",
+                               accept_findings=("finding 1", "finding 0"))
+        self.assertEqual(status, "published")
+        audit = json.loads((self.repo / "audits" / "page.tine.example" / "0.1.0.json").read_text())
+        self.assertEqual(audit["manualApproval"]["acceptedFindings"], ["finding 0", "finding 1"])
+
+    def test_acceptance_must_name_exactly_the_medium_findings(self):
+        path = self.write_envelope(self.uncertain_envelope("medium", "medium"))
+        for accepted in (("finding 0",), ("finding 0", "finding 1", "other")):
+            with self.assertRaises(RuntimeError):
+                publish(path, self.repo, self.key, approve_quarantine=True, approval_note="x",
+                        accept_findings=accepted)
+        self.assertNotIn("manualApproval", json.loads(path.read_text()))
+
+    def test_high_finding_or_reject_can_never_be_accepted(self):
+        path = self.write_envelope(self.uncertain_envelope("medium", "high"))
+        with self.assertRaises(RuntimeError):
+            publish(path, self.repo, self.key, approve_quarantine=True, approval_note="x",
+                    accept_findings=("finding 0",))
+        value = self.uncertain_envelope("medium")
+        value["aiReview"]["disposition"] = "reject"
+        path = self.write_envelope(value)
+        with self.assertRaises(RuntimeError):
+            publish(path, self.repo, self.key, approve_quarantine=True, approval_note="x",
+                    accept_findings=("finding 0",))
+
+    def test_validation_rejects_an_uncertain_audit_without_acceptance(self):
+        from validation import validate_publishable_audit
+        value = self.uncertain_envelope("medium")
+        value["manualApproval"] = {"by": "Claude (working on Martin's behalf)", "note": "x", "approvedAt": "t"}
+        with self.assertRaises(ValueError):
+            validate_publishable_audit(value, value["submission"])
+        value["manualApproval"]["acceptedFindings"] = ["finding 0"]
+        validate_publishable_audit(value, value["submission"])
+
 
 if __name__ == "__main__":
     unittest.main()

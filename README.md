@@ -25,6 +25,9 @@ they are accepted only as a bounded allowlist of literal semantic colors.
 Every public version links its deterministic and AI reports. Passing is evidence, not
 a guarantee. The signed index pins separate SHA-256 digests for each manifest and
 WASM artifact as well as the complete public safety report. It also records whether
-publication was automatic or a named manual approval. Tine checks these bytes before
+publication was automatic or a named manual approval. A manual approval over an AI
+review that is not a certain pass must name each medium finding it accepts, and those
+names are in the public report; a high or critical finding or a rejecting review can
+never be approved. Tine checks these bytes before
 displaying the report. See [POLICY.md](POLICY.md), [SECURITY.md](SECURITY.md), and
 [`auditor/README.md`](auditor/README.md).

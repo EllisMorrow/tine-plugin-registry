@@ -13,7 +13,7 @@ import tempfile
 import tomllib
 from github_app import github_json, installation_token
 from validation import (
-    MANUAL_APPROVERS, submission_id, submission_kind, validate_manifest_identity,
+    MANUAL_APPROVERS, ai_review_acceptable_with, submission_id, submission_kind, validate_manifest_identity,
     validate_publishable_audit, validate_submission,
 )
 
@@ -92,6 +92,7 @@ def publish(
     approve_quarantine: bool = False,
     approval_note: str = "",
     approved_by: str = MANUAL_APPROVERS[0],
+    accept_findings: tuple[str, ...] = (),
 ) -> tuple[str, str, int | None]:
     envelope = json.loads(envelope_path.read_text())
     pr = envelope.get("pullRequest", {}).get("number")
@@ -101,14 +102,24 @@ def publish(
             raise RuntimeError("unknown manual approver")
         checker = envelope.get("checker", {})
         ai = envelope.get("aiReview", {})
-        if checker.get("status") != "passed" or ai.get("disposition") != "pass" or ai.get("uncertain"):
-            raise RuntimeError("manual approval requires deterministic pass and certain AI pass")
+        accepted = sorted(set(accept_findings))
+        if checker.get("status") != "passed":
+            raise RuntimeError("manual approval requires a deterministic pass")
+        certain_pass = ai.get("disposition") == "pass" and ai.get("uncertain") is False
+        if accepted and not ai_review_acceptable_with(ai, accepted):
+            raise RuntimeError(
+                "accepted findings must name exactly the review's medium findings, "
+                "with no high or critical finding and no reject"
+            )
+        if not certain_pass and not accepted:
+            raise RuntimeError("manual approval requires a certain AI pass, or --accept-finding for each medium finding")
         existing_approval = envelope.get("manualApproval")
         if existing_approval is not None:
             if (
                 not isinstance(existing_approval, dict)
                 or existing_approval.get("by") != approved_by
                 or existing_approval.get("note") != approval_note
+                or existing_approval.get("acceptedFindings", []) != accepted
                 or not isinstance(existing_approval.get("approvedAt"), str)
             ):
                 raise RuntimeError("stored manual approval does not match this approval request")
@@ -118,6 +129,8 @@ def publish(
                 "note": approval_note,
                 "approvedAt": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             }
+            if accepted:
+                envelope["manualApproval"]["acceptedFindings"] = accepted
             # Persist the approval identity/timestamp before any network action so
             # a failed push can be retried without changing immutable audit bytes.
             envelope_path.write_bytes(canonical(envelope))
@@ -223,9 +236,16 @@ def main() -> None:
     parser.add_argument("--approve-quarantine", action="store_true")
     parser.add_argument("--approval-note", default="")
     parser.add_argument("--approved-by", choices=MANUAL_APPROVERS, help="required with --approve-quarantine")
+    parser.add_argument(
+        "--accept-finding", action="append", default=[],
+        help="with --approve-quarantine: accept this medium AI finding by exact title (repeat for each); "
+        "required when the AI review is not a certain pass",
+    )
     args = parser.parse_args()
     if args.approve_quarantine and not args.approved_by:
         parser.error("--approve-quarantine requires --approved-by")
+    if args.accept_finding and not (args.approve_quarantine and args.approval_note):
+        parser.error("--accept-finding requires --approve-quarantine and a non-empty --approval-note")
     config = tomllib.loads(args.config.read_text())
     repo = pathlib.Path(config["registry_checkout"])
     key = private_file(pathlib.Path(config["signing_key"]), "registry signing key")
@@ -236,6 +256,7 @@ def main() -> None:
         approve_quarantine=args.approve_quarantine,
         approval_note=args.approval_note,
         approved_by=args.approved_by or MANUAL_APPROVERS[0],
+        accept_findings=tuple(args.accept_finding),
     )
     if disposition == "published":
         git(repo, ["add", "index.json", "index.json.sig", "packages", "themes", "audits"])

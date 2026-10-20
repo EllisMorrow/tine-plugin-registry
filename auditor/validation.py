@@ -19,6 +19,33 @@ SUBMISSION_V1_FIELDS = {"schemaVersion", "pluginId", "version", "repository", "c
 SUBMISSION_V2_FIELDS = {"schemaVersion", "kind", "packageId", "version", "repository", "commit", "manifestPath"}
 AUDIT_RISKS = {"low", "review", "elevated"}
 FINDING_SEVERITIES = {"info", "low", "medium", "high", "critical"}
+# A named approver may accept findings up to this severity by title; a high or
+# critical finding, or a rejecting review, can never be approved past.
+ACCEPTABLE_SEVERITIES = {"info", "low", "medium"}
+
+
+def findings_needing_acceptance(ai: dict) -> set[str]:
+    """Titles of the medium findings an approval over an uncertain review must name."""
+    return {
+        f["title"] for f in ai.get("findings", [])
+        if isinstance(f, dict) and f.get("severity") == "medium" and isinstance(f.get("title"), str)
+    }
+
+
+def ai_review_acceptable_with(ai: dict, accepted: object) -> bool:
+    """Whether a review that is not a certain pass may be published under a named
+    approval accepting exactly its medium findings (Martin 2026-10-20, BN3)."""
+    if ai.get("disposition") not in {"pass", "quarantine"}:
+        return False
+    findings = ai.get("findings")
+    if not isinstance(findings, list) or any(
+        not isinstance(f, dict) or f.get("severity") not in ACCEPTABLE_SEVERITIES for f in findings
+    ):
+        return False
+    if not isinstance(accepted, list) or any(not isinstance(t, str) or not t for t in accepted):
+        return False
+    needed = findings_needing_acceptance(ai)
+    return bool(needed) and set(accepted) == needed
 
 
 def validate_submission(value: object) -> dict:
@@ -94,7 +121,14 @@ def validate_publishable_audit(envelope: object, submission: dict) -> dict:
         raise ValueError("audit timestamp is invalid")
 
     ai = envelope.get("aiReview")
-    if not isinstance(ai, dict) or ai.get("disposition") != "pass" or ai.get("uncertain") is not False:
+    if not isinstance(ai, dict):
+        raise ValueError("AI source review is invalid")
+    certain_pass = ai.get("disposition") == "pass" and ai.get("uncertain") is False
+    approval = envelope.get("manualApproval")
+    if not certain_pass and not (
+        isinstance(approval, dict)
+        and ai_review_acceptable_with(ai, approval.get("acceptedFindings"))
+    ):
         raise ValueError("AI source review is not a certain pass")
     if not isinstance(ai.get("summary"), str) or not ai["summary"]:
         raise ValueError("AI source review summary is invalid")
@@ -119,7 +153,6 @@ def validate_publishable_audit(envelope: object, submission: dict) -> dict:
     ):
         raise ValueError("AI source review areas are invalid")
 
-    approval = envelope.get("manualApproval")
     if approval is not None and (
         not isinstance(approval, dict)
         or approval.get("by") not in MANUAL_APPROVERS
@@ -127,6 +160,7 @@ def validate_publishable_audit(envelope: object, submission: dict) -> dict:
         or not approval["note"]
         or not isinstance(approval.get("approvedAt"), str)
         or not approval["approvedAt"]
+        or ("acceptedFindings" in approval and not ai_review_acceptable_with(ai, approval["acceptedFindings"]))
     ):
         raise ValueError("manual approval is invalid")
     if envelope["disposition"] == "quarantine" and approval is None:
