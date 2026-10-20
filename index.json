@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T14:42:01.958348+00:00",
+  "generatedAt": "2026-10-20T18:44:49.681523+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -216,6 +216,43 @@
           "sha256": "187423b0bee124ae2386516967c3eb7e349cba614c5dfd7185459255092ce63c",
           "version": "0.2.0",
           "wasmUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/packages/page.tine.query-filter/0.2.0/plugin.wasm"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Recalculate Org-style spreadsheet formulas (#+TBLFM, or <!-- TBLFM --> in Markdown) in the focused block's tables.",
+      "id": "page.tine.table-formulas",
+      "license": "MIT",
+      "name": "Table formulas",
+      "source": "https://github.com/martinkoutecky/tine-plugin-table-formulas",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-20T06:40:14.513Z",
+            "manualApproval": true,
+            "risk": "review",
+            "sha256": "418f6e6d8d9941f026c7d2192df536685c00e67f3c35686a10c7c92d42af0bb4",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/page.tine.table-formulas/0.1.0.json"
+          },
+          "capabilities": [
+            "commands.register",
+            "graph.write.block"
+          ],
+          "manifestSha256": "6337d9ed7589523c41f2845c1b20c66def2948cee9bfbaab09cb92750649fa2b",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/packages/page.tine.table-formulas/0.1.0/manifest.json",
+          "platforms": [
+            "desktop",
+            "android",
+            "ios"
+          ],
+          "publishedAt": "2026-10-20T18:44:49.681509+00:00",
+          "sha256": "6016ebda25485f47ae0747b5e8ef1481ef1e805a8268c86d9be253cf7b73ccf4",
+          "version": "0.1.0",
+          "wasmUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/packages/page.tine.table-formulas/0.1.0/plugin.wasm"
         }
       ]
     }

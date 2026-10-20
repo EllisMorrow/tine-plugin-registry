@@ -1,0 +1,32 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "Claude for Tine",
+  "capabilities": [
+    "commands.register",
+    "graph.write.block"
+  ],
+  "contributions": {
+    "commands": [
+      {
+        "defaultBinding": "mod+alt+r",
+        "description": "Apply the table formulas in the focused block and re-align the tables they belong to.",
+        "id": "recalculate",
+        "title": "Table: recalculate"
+      }
+    ]
+  },
+  "description": "Recalculate Org-style spreadsheet formulas (#+TBLFM, or <!-- TBLFM --> in Markdown) in the focused block's tables.",
+  "entry": "target/wasm32-unknown-unknown/release/tine_plugin_table_formulas.wasm",
+  "id": "page.tine.table-formulas",
+  "license": "MIT",
+  "name": "Table formulas",
+  "platforms": [
+    "desktop",
+    "android",
+    "ios"
+  ],
+  "schemaVersion": 1,
+  "source": "https://github.com/martinkoutecky/tine-plugin-table-formulas",
+  "version": "0.1.0"
+}
