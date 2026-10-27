@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "kind": "theme",
   "packageId": "io.github.ellismorrow.theme.nord",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "repository": "https://github.com/EllisMorrow/tine-theme-nord-prism",
-  "commit": "bbe30836b2fef0a140b89f6cc59b33a8906fbec1",
+  "commit": "276bf2e0d1fd1c64d33e29f2a9d3963a81091976",
   "manifestPath": "theme.json"
 }
