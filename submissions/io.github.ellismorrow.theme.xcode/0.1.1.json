@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.xcode",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-xcode-prism",
+  "commit": "37203ba9fcde07eec3953819482d817429c0cdeb",
+  "manifestPath": "theme.json"
+}
