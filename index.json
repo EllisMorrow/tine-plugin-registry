@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:17:59.512100+00:00",
+  "generatedAt": "2026-10-27T15:18:08.226634+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -346,6 +346,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:15:55.309368+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Codex-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.codex",
+      "license": "MIT",
+      "name": "Codex · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-codex-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:05:29.346Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "3e93ba7a631069b873252029fea2a47dcaeddb7e563cdbcbccd21fc41bead6fe",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.codex/0.1.1.json"
+          },
+          "manifestSha256": "3ecff07a9acac3b98d2120275e323e1e1bb7c8289ae035d1d5149a2ddea2aaba",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.codex/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:18:08.226625+00:00",
           "version": "0.1.1"
         }
       ]
