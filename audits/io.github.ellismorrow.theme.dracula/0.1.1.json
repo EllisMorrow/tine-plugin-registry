@@ -1,0 +1,67 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color values and manifest/documentation consistency",
+      "Malicious intent, deceptive behavior, and hidden data channels",
+      "Dependency, build-script, and denial-of-service risk",
+      "External URLs and provenance references",
+      "MIT license preservation and upstream palette attribution",
+      "Unsupported screenshot and validation claims",
+      "Host execution boundary; graph transformations and protocol behavior are not applicable"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The READMEs and adaptation notes claim actual Windows screenshots and Chromium fixture results. The bundle includes screenshot URLs and descriptions, but no image contents, fixture source, or fixture results. The deterministic report supports manifest validation only.",
+        "impact": "Screenshot authenticity, application coverage, and claimed fixture testing cannot be independently assessed from the supplied bundle.",
+        "severity": "low",
+        "title": "Screenshot and testing claims lack supporting artifacts"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The supplied manifest is an inert literal-color theme consistent with its documented palette and MIT attribution. No malicious behavior is evident, but missing validation artifacts prevent verification of several publication claims.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T03:40:05.934Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "2724cfaacdd6f2343a95cd74774d329226cc4e47b451bbb79233ebea07389a18",
+      "sourceCommit": "1d317c6d8570fe563a5358d8389471a9f8f02295"
+    },
+    "risk": "low",
+    "sha256": "2724cfaacdd6f2343a95cd74774d329226cc4e47b451bbb79233ebea07389a18",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.dracula",
+      "name": "Dracula · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "1d317c6d8570fe563a5358d8389471a9f8f02295",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:15:45.297348+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "f78e3813a31458cd920d1e9b49600de0b337e036",
+    "number": 5
+  },
+  "submission": {
+    "commit": "1d317c6d8570fe563a5358d8389471a9f8f02295",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.dracula",
+    "repository": "https://github.com/EllisMorrow/tine-theme-dracula-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

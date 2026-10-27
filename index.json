@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:15:06.227490+00:00",
+  "generatedAt": "2026-10-27T15:15:45.297996+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -260,6 +260,36 @@
   "revocations": [],
   "schemaVersion": 1,
   "themes": [
+    {
+      "aiDevelopment": "primary",
+      "description": "A complete light and dark Tine palette inspired by Dracula and its Alucard companion: warm paper by day, violet night, cyan links and rose-pink tags.",
+      "id": "io.github.ellismorrow.theme.dracula",
+      "license": "MIT",
+      "name": "Dracula · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-dracula-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T03:40:05.934Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "a27ca5babb8b6e5c619b6d027402f7e070191fd6a5f602ae39ec394e20eedf50",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.dracula/0.1.1.json"
+          },
+          "manifestSha256": "6b1a31da9dee7bba283b6282fdc86280eea1823e3aadb1ceda25a518e5587235",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.dracula/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:15:45.297983+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
     {
       "aiDevelopment": "primary",
       "description": "A light and dark Nord palette adaptation for Tine: Snow Storm surfaces by day, polar blue-gray by night, with blue/cyan links, violet tags and amber highlights.",

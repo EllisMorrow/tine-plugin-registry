@@ -1,0 +1,77 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "A complete light and dark Tine palette inspired by Dracula and its Alucard companion: warm paper by day, violet night, cyan links and rose-pink tags.",
+  "id": "io.github.ellismorrow.theme.dracula",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#343746",
+      "--ls-active-primary-color": "#bd93f9",
+      "--ls-block-bullet-color": "#9c9fbc",
+      "--ls-block-highlight-color": "#343746",
+      "--ls-border-color": "rgba(248, 248, 242, 0.12)",
+      "--ls-guideline-color": "rgba(248, 248, 242, 0.18)",
+      "--ls-link-text-color": "#8be9fd",
+      "--ls-link-text-hover-color": "#f8f8f2",
+      "--ls-page-inline-code-bg-color": "#343746",
+      "--ls-page-inline-code-color": "#f8f8f2",
+      "--ls-page-mark-bg-color": "#48452d",
+      "--ls-page-mark-color": "#f1fa8c",
+      "--ls-primary-background-color": "#282a36",
+      "--ls-primary-text-color": "#f8f8f2",
+      "--ls-quaternary-background-color": "#343746",
+      "--ls-secondary-background-color": "#22242e",
+      "--ls-secondary-text-color": "#b3b4c5",
+      "--ls-selection-background-color": "#343746",
+      "--ls-tag-text-color": "#ff79c6",
+      "--ls-tertiary-background-color": "#303340",
+      "--ls-title-text-color": "#f8f8f2"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#e8e3ee",
+      "--ls-active-primary-color": "#644ac9",
+      "--ls-block-bullet-color": "#827a5d",
+      "--ls-block-highlight-color": "#e8e3ee",
+      "--ls-border-color": "rgba(108, 102, 75, 0.18)",
+      "--ls-guideline-color": "rgba(108, 102, 75, 0.22)",
+      "--ls-link-text-color": "#035d84",
+      "--ls-link-text-hover-color": "#1f1f1f",
+      "--ls-page-inline-code-bg-color": "#ece7db",
+      "--ls-page-inline-code-color": "#1f1f1f",
+      "--ls-page-mark-bg-color": "#f1e6ad",
+      "--ls-page-mark-color": "#1f1f1f",
+      "--ls-primary-background-color": "#fffbeb",
+      "--ls-primary-text-color": "#1f1f1f",
+      "--ls-quaternary-background-color": "#e5e0d6",
+      "--ls-secondary-background-color": "#f5f0df",
+      "--ls-secondary-text-color": "#5c573f",
+      "--ls-selection-background-color": "#cfcfde",
+      "--ls-tag-text-color": "#a3144d",
+      "--ls-tertiary-background-color": "#ece7db",
+      "--ls-title-text-color": "#1f1f1f"
+    }
+  },
+  "name": "Dracula · Prism",
+  "portedFrom": {
+    "authors": [
+      "Dracula Theme",
+      "Zeno Rocha",
+      "Lucas de França"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "Dracula / Alucard",
+    "relationship": "behavioral-port",
+    "revision": "e22ebcc048b8aff586f9bc94db30ff5347070b42",
+    "source": "https://github.com/dracula/dracula-theme"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-dracula-prism/0687bd50c3c2aeb9a67a66e3bf5a101bd3ca7ef3/docs/dracula-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-dracula-prism/0687bd50c3c2aeb9a67a66e3bf5a101bd3ca7ef3/docs/dracula-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-dracula-prism",
+  "version": "0.1.1"
+}
