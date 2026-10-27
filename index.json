@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:19:58.180214+00:00",
+  "generatedAt": "2026-10-27T15:20:08.452880+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -1036,6 +1036,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:17:49.251225+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Vercel-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.vercel",
+      "license": "MIT",
+      "name": "Vercel · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-vercel-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T14:30:06.099Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "9bb1e3fe96fb77e793557759b41398d5973456bdf255b67df2a8466d4065de8e",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.vercel/0.1.1.json"
+          },
+          "manifestSha256": "8348ac93e935f7a70e3f8e2d1ec877fd0d70b118f215ddb9813a8c48806c692e",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.vercel/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:20:08.452871+00:00",
           "version": "0.1.1"
         }
       ]

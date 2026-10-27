@@ -1,0 +1,73 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color values and manifest/documentation consistency",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "License and provenance",
+      "Validation and screenshot claims",
+      "Host execution boundary: no executable CSS, graph transformations, or protocol behavior present"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "README.md and docs/adaptation.md explicitly state that the original upstream source of the referenced Codex preset has not been independently established.",
+        "impact": "The package includes an MIT license for its adaptation, but the supplied evidence does not fully establish the provenance of referenced palette values.",
+        "severity": "low",
+        "title": "Upstream provenance remains unresolved"
+      },
+      {
+        "evidence": "Documentation claims real, unedited Windows screenshots and Chromium fixture checks, but the supplied bundle contains neither image contents nor the fixture or its output. The deterministic report supports the manifest format check only.",
+        "impact": "Screenshot authenticity, application coverage, and browser-test results remain unverified.",
+        "severity": "low",
+        "title": "Some validation claims cannot be verified"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "No malicious behavior is evident in the inert color manifest. Quarantine is warranted because upstream provenance remains unresolved and the bundle does not substantiate screenshot and browser-test claims.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T14:30:06.099Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "2403389b5e1474a5f7e9b1200ec48594e565d1799ef3c46340a564bcbe88bee3",
+      "sourceCommit": "cfa389be4cd12e986800203c8c879ac1400e4b71"
+    },
+    "risk": "low",
+    "sha256": "2403389b5e1474a5f7e9b1200ec48594e565d1799ef3c46340a564bcbe88bee3",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.vercel",
+      "name": "Vercel · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "cfa389be4cd12e986800203c8c879ac1400e4b71",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:20:08.452121+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "c4988a976e314da245281f1a8e1ce4e50efdc4c4",
+    "number": 32
+  },
+  "submission": {
+    "commit": "cfa389be4cd12e986800203c8c879ac1400e4b71",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.vercel",
+    "repository": "https://github.com/EllisMorrow/tine-theme-vercel-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
