@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:17:21.654159+00:00",
+  "generatedAt": "2026-10-27T15:17:30.773317+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -436,6 +436,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:16:41.004223+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A Material and Material Night pair for Tine, joining deep blue-gray surfaces with a pale, airy counterpart and teal accents.",
+      "id": "io.github.ellismorrow.theme.material",
+      "license": "MIT",
+      "name": "Material · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-material-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:05:04.920Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "35e71e238a8fcccefe8a95411c5746898a965f3989ab6b55ac1329dff306ed67",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.material/0.1.1.json"
+          },
+          "manifestSha256": "d07306d4f3f209fe1f66025fca03bc0956ead68fbb29b73bfcdd743da501a24b",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.material/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:17:30.773308+00:00",
           "version": "0.1.1"
         }
       ]

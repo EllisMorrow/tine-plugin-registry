@@ -1,0 +1,76 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "A Material and Material Night pair for Tine, joining deep blue-gray surfaces with a pale, airy counterpart and teal accents.",
+  "id": "io.github.ellismorrow.theme.material",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#333333",
+      "--ls-active-primary-color": "#80CBC4",
+      "--ls-block-bullet-color": "#90A4AE",
+      "--ls-block-highlight-color": "#333333",
+      "--ls-border-color": "rgba(205, 211, 222, 0.14)",
+      "--ls-guideline-color": "rgba(205, 211, 222, 0.2)",
+      "--ls-link-text-color": "#80CBC4",
+      "--ls-link-text-hover-color": "#EEFFFF",
+      "--ls-page-inline-code-bg-color": "#292929",
+      "--ls-page-inline-code-color": "#CDD3DE",
+      "--ls-page-mark-bg-color": "#4A3C2E",
+      "--ls-page-mark-color": "#FFCB6B",
+      "--ls-primary-background-color": "#212121",
+      "--ls-primary-text-color": "#CDD3DE",
+      "--ls-quaternary-background-color": "#333333",
+      "--ls-secondary-background-color": "#1b1b1b",
+      "--ls-secondary-text-color": "#90A4AE",
+      "--ls-selection-background-color": "#414141",
+      "--ls-tag-text-color": "#C792EA",
+      "--ls-tertiary-background-color": "#292929",
+      "--ls-title-text-color": "#EEFFFF"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#E0F2F1",
+      "--ls-active-primary-color": "#39ADB5",
+      "--ls-block-bullet-color": "#78909C",
+      "--ls-block-highlight-color": "#E0F2F1",
+      "--ls-border-color": "rgba(55, 71, 79, 0.18)",
+      "--ls-guideline-color": "rgba(55, 71, 79, 0.22)",
+      "--ls-link-text-color": "#007C91",
+      "--ls-link-text-hover-color": "#37474F",
+      "--ls-page-inline-code-bg-color": "#ECEFF1",
+      "--ls-page-inline-code-color": "#455A64",
+      "--ls-page-mark-bg-color": "#FFF1C2",
+      "--ls-page-mark-color": "#455A64",
+      "--ls-primary-background-color": "#FAFAFA",
+      "--ls-primary-text-color": "#455A64",
+      "--ls-quaternary-background-color": "#CFD8DC",
+      "--ls-secondary-background-color": "#F5F5F5",
+      "--ls-secondary-text-color": "#546E7A",
+      "--ls-selection-background-color": "#B2DFDB",
+      "--ls-tag-text-color": "#75458F",
+      "--ls-tertiary-background-color": "#ECEFF1",
+      "--ls-title-text-color": "#37474F"
+    }
+  },
+  "name": "Material · Prism",
+  "portedFrom": {
+    "authors": [
+      "Mattia Astorino",
+      "Microsoft"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "Material Night Eighties / Material Night",
+    "relationship": "behavioral-port",
+    "revision": "2a810696b25f1b681138e9c8129e03f463413a85",
+    "source": "https://github.com/microsoft/vscode-themes"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-material-prism/4f4b18c5ba783911aa5459b6dc2e83be53e9f64c/docs/material-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-material-prism/4f4b18c5ba783911aa5459b6dc2e83be53e9f64c/docs/material-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-material-prism",
+  "version": "0.1.1"
+}

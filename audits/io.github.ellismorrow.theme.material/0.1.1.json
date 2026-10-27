@@ -1,0 +1,77 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest and documentation consistency",
+      "Literal color allowlist and inert host behavior",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "External links and pinned screenshot references",
+      "License and upstream provenance",
+      "Testing and accessibility claim support"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The bundle includes upstream Material metadata but omits material/LICENSE.txt and the referenced Material-Theme-Darker.tmTheme and Material-Theme-Lighter.tmTheme files.",
+        "impact": "The declared palette derivation and completeness of required copyright notices cannot be confirmed from the supplied source.",
+        "severity": "medium",
+        "title": "Upstream provenance and license remain unverified"
+      },
+      {
+        "evidence": "The Chromium fixture and screenshot images are absent. docs/adaptation.md says user screenshots are pending, while the READMEs and docs/screenshots.md say they were supplied.",
+        "impact": "The deterministic report supports format validation, but application coverage, screenshot contents, and fixture results remain unverified; the documentation also contains a stale contradiction.",
+        "severity": "low",
+        "title": "Testing and screenshot claims lack supporting artifacts"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only inert literal colors, with no apparent malicious behavior. The supplied bundle is insufficient to verify upstream licensing, palette provenance, and several testing claims.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:05:04.920Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "a5aebec5b32cda9b2430437c3cebe85402d7697f1d32bffc7bded735f4140ee4",
+      "sourceCommit": "884eed405fd10bdca2a34a56b593925c2beea30b"
+    },
+    "risk": "low",
+    "sha256": "a5aebec5b32cda9b2430437c3cebe85402d7697f1d32bffc7bded735f4140ee4",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.material",
+      "name": "Material · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "884eed405fd10bdca2a34a56b593925c2beea30b",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "acceptedFindings": [
+      "Upstream provenance and license remain unverified"
+    ],
+    "approvedAt": "2026-10-27T15:17:30.772618+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; accepted medium finding(s) about unverifiable upstream provenance/claims, not about the colours (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "3645feaf1c59ea17995c122aa3d1fd5337838629",
+    "number": 16
+  },
+  "submission": {
+    "commit": "884eed405fd10bdca2a34a56b593925c2beea30b",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.material",
+    "repository": "https://github.com/EllisMorrow/tine-theme-material-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
