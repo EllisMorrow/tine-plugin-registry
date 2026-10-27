@@ -1,0 +1,75 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest and documentation consistency",
+      "Literal color values and inert host execution model",
+      "Malicious intent and deceptive behavior",
+      "Dependencies and build scripts: none supplied or required by the manifest",
+      "Denial of service and hidden data channels",
+      "External screenshot URLs and documentation badges",
+      "MIT license retention and declared upstream provenance",
+      "Unsupported testing and screenshot claims",
+      "Graph transformations and protocol abuse: not applicable to this inert theme"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "READMEs and docs/screenshots.md claim real, unedited Windows captures, but neither PNG is included in the supplied bundle. Chromium fixture results are documented without the fixture or its output.",
+        "impact": "Screenshot authenticity, privacy claims, and reported application coverage cannot be established from the supplied evidence.",
+        "severity": "low",
+        "title": "Screenshot and testing claims lack supporting artifacts"
+      },
+      {
+        "evidence": "docs/adaptation.md says user screenshots and full interaction acceptance are pending, while the READMEs and docs/screenshots.md say screenshots were supplied after testing.",
+        "impact": "The actual validation status is unclear and requires reconciliation.",
+        "severity": "low",
+        "title": "Validation documentation contradicts release claims"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "No malicious behavior is evident in the literal-color manifest. Quarantine is required because screenshot and testing claims are incompletely supported and internally inconsistent.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:26:36.094Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "c9e94b17f9a89d876d335a6206dabf50150481ada3693196779802c610c13065",
+      "sourceCommit": "db8febac40f3237c2eebf410f15683a44ce094d8"
+    },
+    "risk": "low",
+    "sha256": "c9e94b17f9a89d876d335a6206dabf50150481ada3693196779802c610c13065",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.solarized",
+      "name": "Solarized · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "db8febac40f3237c2eebf410f15683a44ce094d8",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:17:00.804595+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "799aa9a6c326d337992b08f1a022e723a3cb1bb4",
+    "number": 12
+  },
+  "submission": {
+    "commit": "db8febac40f3237c2eebf410f15683a44ce094d8",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.solarized",
+    "repository": "https://github.com/EllisMorrow/tine-theme-solarized-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

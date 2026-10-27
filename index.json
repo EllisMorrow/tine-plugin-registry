@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:16:51.206651+00:00",
+  "generatedAt": "2026-10-27T15:17:00.805259+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -496,6 +496,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:16:23.588535+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A complete light and dark Solarized palette for Tine, carrying its measured blue-green foundations and balanced accents between daylight and dusk.",
+      "id": "io.github.ellismorrow.theme.solarized",
+      "license": "MIT",
+      "name": "Solarized · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-solarized-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:26:36.094Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "a7c0712672f8fd5ac45cc6eb644444260ed544ea0ce321c0e8d83bbf00b1d03d",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.solarized/0.1.1.json"
+          },
+          "manifestSha256": "b32ab9ffbf59e48c7358537e4ea8d034329089620d68eecd0401554dbfd8d85f",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.solarized/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:17:00.805251+00:00",
           "version": "0.1.1"
         }
       ]
