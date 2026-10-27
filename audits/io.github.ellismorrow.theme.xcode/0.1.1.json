@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color allowlist and manifest consistency",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script exposure",
+      "Denial of service and hidden data channels",
+      "License notices and declared provenance",
+      "Testing and screenshot claims",
+      "External metadata URLs",
+      "Graph transformations and protocol abuse: not applicable to this inert theme"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "README.md and docs/screenshots.md claim completed Windows screenshot testing, while docs/adaptation.md says user screenshots and full interaction acceptance are pending. The referenced PNG files and Chromium fixture are absent from the supplied bundle.",
+        "impact": "Screenshot authenticity, coverage, and fixture results cannot be independently assessed from this bundle.",
+        "severity": "low",
+        "title": "Validation documentation conflicts and screenshots are unavailable"
+      },
+      {
+        "evidence": "The supplied upstream README and package.json identify the Classic Light/Dark variants, and the MIT notice is preserved. However, their actual palette files and the referenced installed Codex color reference are not supplied.",
+        "impact": "The declared upstream relationship is plausible, but exact color derivation cannot be verified.",
+        "severity": "low",
+        "title": "Palette provenance is only partially substantiated"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only bounded literal colors, with no apparent malicious behavior. However, missing supporting assets and conflicting validation documentation leave provenance and testing claims incompletely supported.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:05:50.227Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "30249e2ee837316aea81051680356308857781dc8124bffd67207b95dac86b51",
+      "sourceCommit": "37203ba9fcde07eec3953819482d817429c0cdeb"
+    },
+    "risk": "low",
+    "sha256": "30249e2ee837316aea81051680356308857781dc8124bffd67207b95dac86b51",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.xcode",
+      "name": "Xcode · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "37203ba9fcde07eec3953819482d817429c0cdeb",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:17:12.027937+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "0795a8fdab87a642cbd83a2aa67542eb0b6795e5",
+    "number": 14
+  },
+  "submission": {
+    "commit": "37203ba9fcde07eec3953819482d817429c0cdeb",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.xcode",
+    "repository": "https://github.com/EllisMorrow/tine-theme-xcode-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

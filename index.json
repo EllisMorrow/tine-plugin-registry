@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:17:00.805259+00:00",
+  "generatedAt": "2026-10-27T15:17:12.028800+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -526,6 +526,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:17:00.805251+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A Classic Light and Dark pair inspired by Xcode's clear editor colors, with quiet graphite surfaces and familiar blue, green and violet syntax accents.",
+      "id": "io.github.ellismorrow.theme.xcode",
+      "license": "MIT",
+      "name": "Xcode · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-xcode-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:05:50.227Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "1b7a12521dcd3bf769372a521465005abf4ea5f2f56abcc527aa9b6efaae40aa",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.xcode/0.1.1.json"
+          },
+          "manifestSha256": "6471989653544db3ff8165cd7e18fae1fc9322b0079b4bec2741a772d5078c06",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.xcode/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:17:12.028788+00:00",
           "version": "0.1.1"
         }
       ]
