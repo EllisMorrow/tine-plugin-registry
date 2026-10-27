@@ -1,0 +1,82 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest and palette consistency",
+      "Malicious intent and deceptive behavior",
+      "Execution, dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "License and upstream provenance",
+      "Validation and screenshot claims",
+      "Host theme allowlist boundaries"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "PORT-EVIDENCE-OMITTED.txt explicitly states that upstream sources are excluded. The manifest declares a specific VS Code revision and MIT-licensed port.",
+        "impact": "The claimed upstream relationship, palette derivation and license provenance cannot be independently established.",
+        "severity": "medium",
+        "title": "Declared upstream evidence omitted"
+      },
+      {
+        "evidence": "Documentation claims real Windows screenshots and Chromium fixture results, but neither image contents nor fixture source/results are supplied. adaptation.md also says screenshots are pending, contradicting the README.",
+        "impact": "Application coverage and screenshot authenticity remain unverified; documentation contains stale or inconsistent validation claims.",
+        "severity": "low",
+        "title": "Screenshot and fixture claims lack supporting artifacts"
+      },
+      {
+        "evidence": "Both modes contain 21 literal hex or rgba color values. No executable code, CSS payload, dependencies or build scripts appear in the supplied bundle.",
+        "impact": "Under the stated host allowlist, the supplied theme provides no apparent execution, graph modification, protocol abuse or data-exfiltration mechanism.",
+        "severity": "info",
+        "title": "Theme payload has limited execution risk"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only inert literal colors and shows no executable payload. Quarantine is required because upstream provenance and several validation claims cannot be verified from the supplied bundle.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T15:15:54.511Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "b87b3754357b4a2d01ab859694eacbee75def39ff2a0df5967968b2e61014d3a",
+      "sourceCommit": "50a3e8c60a10bb438948540ad43eb55aaf93a79a"
+    },
+    "risk": "low",
+    "sha256": "b87b3754357b4a2d01ab859694eacbee75def39ff2a0df5967968b2e61014d3a",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.vscode-plus",
+      "name": "VS Code Plus · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "50a3e8c60a10bb438948540ad43eb55aaf93a79a",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "acceptedFindings": [
+      "Declared upstream evidence omitted"
+    ],
+    "approvedAt": "2026-10-27T15:20:39.337869+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; upstream port evidence (microsoft/vscode) is too large to include, so it was omitted by design (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "579b66525ca89d7839062dcedcb4688bfc57c2b5",
+    "number": 13
+  },
+  "submission": {
+    "commit": "50a3e8c60a10bb438948540ad43eb55aaf93a79a",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.vscode-plus",
+    "repository": "https://github.com/EllisMorrow/tine-theme-vscode-plus-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "Light+ and Dark+ meet in a familiar workspace palette, with clear paper-white surfaces, deep charcoal and restrained blue accents.",
+  "id": "io.github.ellismorrow.theme.vscode-plus",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#303031",
+      "--ls-active-primary-color": "#007ACC",
+      "--ls-block-bullet-color": "#858585",
+      "--ls-block-highlight-color": "#37373D",
+      "--ls-border-color": "rgba(212, 212, 212, 0.14)",
+      "--ls-guideline-color": "rgba(212, 212, 212, 0.18)",
+      "--ls-link-text-color": "#4FC1FF",
+      "--ls-link-text-hover-color": "#75BEFF",
+      "--ls-page-inline-code-bg-color": "#252526",
+      "--ls-page-inline-code-color": "#D4D4D4",
+      "--ls-page-mark-bg-color": "#51472f",
+      "--ls-page-mark-color": "#D4D4D4",
+      "--ls-primary-background-color": "#1E1E1E",
+      "--ls-primary-text-color": "#D4D4D4",
+      "--ls-quaternary-background-color": "#37373D",
+      "--ls-secondary-background-color": "#252526",
+      "--ls-secondary-text-color": "#A6A6A6",
+      "--ls-selection-background-color": "#3A3D41",
+      "--ls-tag-text-color": "#C586C0",
+      "--ls-tertiary-background-color": "#303031",
+      "--ls-title-text-color": "#D4D4D4"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#E4E6F1",
+      "--ls-active-primary-color": "#007ACC",
+      "--ls-block-bullet-color": "#767676",
+      "--ls-block-highlight-color": "#E4E6F1",
+      "--ls-border-color": "rgba(0, 0, 0, 0.16)",
+      "--ls-guideline-color": "rgba(0, 0, 0, 0.20)",
+      "--ls-link-text-color": "#006AB1",
+      "--ls-link-text-hover-color": "#005A9E",
+      "--ls-page-inline-code-bg-color": "#F3F3F3",
+      "--ls-page-inline-code-color": "#000000",
+      "--ls-page-mark-bg-color": "#FFF2CC",
+      "--ls-page-mark-color": "#000000",
+      "--ls-primary-background-color": "#FFFFFF",
+      "--ls-primary-text-color": "#000000",
+      "--ls-quaternary-background-color": "#D8D8D8",
+      "--ls-secondary-background-color": "#F3F3F3",
+      "--ls-secondary-text-color": "#555555",
+      "--ls-selection-background-color": "#E5EBF1",
+      "--ls-tag-text-color": "#800080",
+      "--ls-tertiary-background-color": "#E8E8E8",
+      "--ls-title-text-color": "#000000"
+    }
+  },
+  "name": "VS Code Plus · Prism",
+  "portedFrom": {
+    "authors": [
+      "Microsoft Corporation"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "Visual Studio Code Light+ / Dark+",
+    "relationship": "behavioral-port",
+    "revision": "4bda7217fc83e8e838b1edd9ebaf21bb9b498c7e",
+    "source": "https://github.com/microsoft/vscode"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-vscode-plus-prism/0ea18083b3d0aeec9e3b6b444e497e0bde7120c7/docs/vscode-plus-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-vscode-plus-prism/0ea18083b3d0aeec9e3b6b444e497e0bde7120c7/docs/vscode-plus-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-vscode-plus-prism",
+  "version": "0.1.1"
+}

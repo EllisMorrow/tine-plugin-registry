@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:20:08.452880+00:00",
+  "generatedAt": "2026-10-27T15:20:39.338664+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -1066,6 +1066,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:20:08.452871+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Light+ and Dark+ meet in a familiar workspace palette, with clear paper-white surfaces, deep charcoal and restrained blue accents.",
+      "id": "io.github.ellismorrow.theme.vscode-plus",
+      "license": "MIT",
+      "name": "VS Code Plus · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-vscode-plus-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T15:15:54.511Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "dcab1899ac21cf9232fcffb64d590df1e57e2c5bcb9d8b3a75be9bfbec48c16d",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.vscode-plus/0.1.1.json"
+          },
+          "manifestSha256": "64a6dde3b7e2d9d4d926606dac38048f0c7e29310b1e5d05c64508a84765355b",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.vscode-plus/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:20:39.338654+00:00",
           "version": "0.1.1"
         }
       ]
