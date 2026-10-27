@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.dracula",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-dracula-prism",
+  "commit": "1d317c6d8570fe563a5358d8389471a9f8f02295",
+  "manifestPath": "theme.json"
+}
