@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.linear",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-linear-prism",
+  "commit": "ee8c41d775068be3103bee590daa41f5e356787b",
+  "manifestPath": "theme.json"
+}
