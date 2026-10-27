@@ -12,7 +12,8 @@ import tempfile
 import tomllib
 from codex_review import review
 from validation import (
-    submission_kind, validate_manifest_identity, validate_source_tree, validate_submission,
+    submission_kind, theme_review_publishable, validate_manifest_identity, validate_source_tree,
+    validate_submission,
 )
 
 
@@ -128,6 +129,10 @@ def locked_sdk_source(plugin_root: pathlib.Path, temp: pathlib.Path, manifest: d
     return sources
 
 
+PORT_EVIDENCE_LIMIT = 400_000
+PORT_EVIDENCE_MAX_FILES = 200
+
+
 def port_evidence_path_relevant(path: pathlib.Path, kind: str) -> bool:
     """Keep theme evidence focused on authored styling, not whole application bundles."""
     name = path.name.lower()
@@ -155,28 +160,63 @@ def pinned_port_source(manifest: dict, temp: pathlib.Path, kind: str) -> list[tu
         or any(char not in "0123456789abcdef" for char in revision)
     ):
         return []
+    # Fetch only the declared revision's tree, then only the relevant blobs: a
+    # full-history clone of a large upstream (microsoft/vscode) crashed audits.
     checkout = temp / "ported-source"
-    safe_git(["clone", "--filter=blob:none", "--no-checkout", source, str(checkout)])
-    safe_git(["-C", str(checkout), "fetch", "--depth=1", "origin", revision])
-    safe_git(["-C", str(checkout), "checkout", "--detach", revision])
-    actual = safe_git(["-C", str(checkout), "rev-parse", "HEAD"], capture_output=True).stdout.strip()
+    safe_git(["init", "-q", str(checkout)])
+    safe_git(["-C", str(checkout), "remote", "add", "origin", source])
+    safe_git(["-C", str(checkout), "fetch", "-q", "--depth=1", "--filter=blob:none", "origin", revision], timeout=300)
+    actual = safe_git(["-C", str(checkout), "rev-parse", "FETCH_HEAD"], capture_output=True).stdout.strip()
     if actual != revision:
         raise RuntimeError("ported source did not resolve to the declared revision")
+    listing = safe_git(
+        ["-C", str(checkout), "ls-tree", "-r", "--full-tree", "-z", revision],
+        capture_output=True, timeout=300,
+    ).stdout
+    # No `-l`: object sizes would lazily fetch every blob of the partial clone.
+    selected: list[tuple[str, str]] = []
+    for entry in listing.split("\0"):
+        if not entry:
+            continue
+        meta, _, rel = entry.partition("\t")
+        mode, kind_, blob = meta.split()
+        # Regular files only: no symlinks (120000) or submodules (160000).
+        if kind_ != "blob" or mode not in {"100644", "100755"}:
+            continue
+        rel_path = pathlib.PurePosixPath(rel)
+        if ".." in rel_path.parts or not port_evidence_path_relevant(pathlib.Path(rel), kind):
+            continue
+        selected.append((rel, blob))
     evidence = temp / "ported-evidence"
     evidence.mkdir()
-    copied_bytes = 0
-    for path in sorted(checkout.rglob("*")):
-        if path.is_symlink() or not path.is_file() or ".git" in path.relative_to(checkout).parts:
-            continue
-        if not port_evidence_path_relevant(path, kind):
-            continue
-        size = path.stat().st_size
-        if copied_bytes + size > 400_000:
+
+    def omitted(reason: str) -> list[tuple[str, pathlib.Path]]:
+        if kind != "theme":
             raise RuntimeError("declared port evidence exceeds the review limit")
-        destination = evidence / path.relative_to(checkout)
+        # A theme is inert colour data: an oversized upstream is reported to the
+        # reviewer as unavailable evidence rather than failing the audit closed.
+        shutil.rmtree(evidence)
+        evidence.mkdir()
+        (evidence / "PORT-EVIDENCE-OMITTED.txt").write_text(
+            f"The declared upstream {source}@{revision} {reason}, over the review limit; "
+            "its sources are not included.\n"
+        )
+        return [(f"declared-ported-source@{revision}", evidence)]
+
+    if len(selected) > PORT_EVIDENCE_MAX_FILES:
+        return omitted(f"has {len(selected)} relevant files")
+    copied_bytes = 0
+    for rel, blob in sorted(selected):
+        data = safe_git(
+            ["-C", str(checkout), "cat-file", "blob", blob],
+            capture_output=True, timeout=120, errors="replace",
+        ).stdout
+        copied_bytes += len(data.encode())
+        if copied_bytes > PORT_EVIDENCE_LIMIT:
+            return omitted(f"has more than {PORT_EVIDENCE_LIMIT} bytes of relevant files")
+        destination = evidence / rel
         destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(path, destination)
-        copied_bytes += size
+        destination.write_text(data)
     return [(f"declared-ported-source@{revision}", evidence)]
 
 
@@ -228,7 +268,7 @@ def audit(submission_path: pathlib.Path, tine: pathlib.Path, image: str, max_sou
                 disposition = "quarantine"
             elif ai["disposition"] == "reject":
                 disposition = "reject"
-            elif ai["disposition"] == "pass" and not ai["uncertain"]:
+            elif theme_review_publishable(ai):
                 disposition = "publish"
             else:
                 disposition = "quarantine"

@@ -16,6 +16,12 @@
   auto-publish only when package risk is low.
 - `graph.write.block`, source/binary mismatch, reviewer uncertainty, prompt-injection
   behavior, unusual build behavior, or any failed check quarantines automatically.
+- Themes are inert literal colours and never execute. A theme whose deterministic
+  check passes publishes automatically when the AI review does not reject it and
+  reports no `medium`, `high` or `critical` finding, even if the reviewer marks
+  itself uncertain (for example about README screenshot or palette-provenance
+  claims it cannot verify). A theme with a `medium` finding needs a named approval
+  that lists it; plugins keep the certain-pass rule above.
 - Malicious versions are rejected; already-published unsafe versions are revoked in
   the signed index. Revocation records are immutable append-only entries.
 - “Community” does not imply third-party authorship or core commitment. Martin may

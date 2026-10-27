@@ -14,7 +14,7 @@ import tomllib
 from github_app import github_json, installation_token
 from validation import (
     MANUAL_APPROVERS, ai_review_acceptable_with, submission_id, submission_kind, validate_manifest_identity,
-    validate_publishable_audit, validate_submission,
+    theme_review_publishable, validate_publishable_audit, validate_submission,
 )
 
 
@@ -106,6 +106,8 @@ def publish(
         if checker.get("status") != "passed":
             raise RuntimeError("manual approval requires a deterministic pass")
         certain_pass = ai.get("disposition") == "pass" and ai.get("uncertain") is False
+        if submission_kind(envelope.get("submission", {})) == "theme" and theme_review_publishable(ai):
+            certain_pass = True
         if accepted and not ai_review_acceptable_with(ai, accepted):
             raise RuntimeError(
                 "accepted findings must name exactly the review's medium findings, "

@@ -32,6 +32,22 @@ def findings_needing_acceptance(ai: dict) -> set[str]:
     }
 
 
+# Themes are inert literal colours (Martin 2026-10-27, D-20261027-TH): a review that
+# does not reject and has no medium or worse finding publishes a theme even when it
+# calls itself uncertain (unverifiable README or provenance claims). Plugins keep the
+# certain-pass rule.
+THEME_AUTO_SEVERITIES = {"info", "low"}
+
+
+def theme_review_publishable(ai: dict) -> bool:
+    if ai.get("disposition") not in {"pass", "quarantine"}:
+        return False
+    findings = ai.get("findings")
+    return isinstance(findings, list) and all(
+        isinstance(f, dict) and f.get("severity") in THEME_AUTO_SEVERITIES for f in findings
+    )
+
+
 def ai_review_acceptable_with(ai: dict, accepted: object) -> bool:
     """Whether a review that is not a certain pass may be published under a named
     approval accepting exactly its medium findings (Martin 2026-10-20, BN3)."""
@@ -124,6 +140,8 @@ def validate_publishable_audit(envelope: object, submission: dict) -> dict:
     if not isinstance(ai, dict):
         raise ValueError("AI source review is invalid")
     certain_pass = ai.get("disposition") == "pass" and ai.get("uncertain") is False
+    if submission_kind(submission) == "theme" and theme_review_publishable(ai):
+        certain_pass = True
     approval = envelope.get("manualApproval")
     if not certain_pass and not (
         isinstance(approval, dict)

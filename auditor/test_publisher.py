@@ -267,6 +267,58 @@ class PublisherSecurityTests(unittest.TestCase):
         value["manualApproval"]["acceptedFindings"] = ["finding 0"]
         validate_publishable_audit(value, value["submission"])
 
+    def theme_envelope(self, *severities, disposition="publish"):
+        manifest = {
+            "schemaVersion": 1, "id": "org.tine.theme.example", "name": "Example colors",
+            "version": "1.0.0", "apiVersion": "0.1", "description": "Example theme",
+            "author": "Example", "license": "MIT", "source": "https://github.com/example/theme",
+            "modes": {"dark": {"--ls-primary-background-color": "#111111"}},
+            "screenshots": [], "aiDevelopment": "none",
+        }
+        submission = {
+            "schemaVersion": 2, "kind": "theme", "packageId": manifest["id"],
+            "version": manifest["version"], "repository": manifest["source"],
+            "commit": "c" * 40, "manifestPath": "theme.json",
+        }
+        return {
+            "format": "tine-package-audit-result/v1", "disposition": disposition,
+            "commitVerified": submission["commit"], "submission": submission,
+            "checker": {"status": "passed", "risk": "low", "checkedAt": "2026-07-12T00:00:00Z"},
+            "aiReview": {"disposition": "quarantine", "uncertain": True, "summary": "Inert colors only.",
+                         "findings": [{"severity": sev, "title": f"finding {i}", "impact": "claims"}
+                                      for i, sev in enumerate(severities)],
+                         "areasReviewed": ["theme manifest and provenance"]},
+            "package": {"manifest": manifest, "manifestSha256": hashlib.sha256(canonical(manifest)).hexdigest()},
+        }
+
+    def test_theme_with_only_low_findings_publishes_over_an_uncertain_review(self):
+        status, _, _ = publish(self.write_envelope(self.theme_envelope("low", "info")), self.repo, self.key)
+        self.assertEqual(status, "published")
+
+    def test_plugin_with_only_low_findings_still_needs_a_certain_pass(self):
+        from validation import validate_publishable_audit
+        value = self.uncertain_envelope("low")
+        value["disposition"] = "publish"
+        with self.assertRaises(ValueError):
+            validate_publishable_audit(value, value["submission"])
+
+    def test_theme_with_a_medium_finding_needs_named_acceptance(self):
+        from validation import validate_publishable_audit
+        value = self.theme_envelope("medium", "low")
+        with self.assertRaises(ValueError):
+            validate_publishable_audit(value, value["submission"])
+        path = self.write_envelope(self.theme_envelope("medium", "low", disposition="quarantine"))
+        with self.assertRaises(RuntimeError):
+            publish(path, self.repo, self.key, approve_quarantine=True, approval_note="x")
+        status, _, _ = publish(path, self.repo, self.key, approve_quarantine=True, approval_note="x",
+                               accept_findings=("finding 0",))
+        self.assertEqual(status, "published")
+
+    def test_quarantined_low_only_theme_can_be_approved_without_named_findings(self):
+        path = self.write_envelope(self.theme_envelope("low", disposition="quarantine"))
+        status, _, _ = publish(path, self.repo, self.key, approve_quarantine=True, approval_note="inert colours")
+        self.assertEqual(status, "published")
+
 
 if __name__ == "__main__":
     unittest.main()
