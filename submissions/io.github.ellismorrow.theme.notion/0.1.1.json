@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.notion",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-notion-prism",
+  "commit": "6778ced6b0d08053bfb7b88736a30acf57285e62",
+  "manifestPath": "theme.json"
+}
