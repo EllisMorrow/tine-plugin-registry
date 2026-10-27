@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:16:41.004232+00:00",
+  "generatedAt": "2026-10-27T15:16:51.206651+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -437,6 +437,36 @@
           ],
           "publishedAt": "2026-10-27T15:15:06.227481+00:00",
           "version": "0.2.0"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A paired One Light and One Dark adaptation for Tine, with clear neutral pages and the familiar blue, green and warm syntax accents.",
+      "id": "io.github.ellismorrow.theme.one",
+      "license": "MIT",
+      "name": "One · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-one-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:27:31.149Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "5eb4bf337d4cfa87b2ee5462d4addc3ef235206b0b43532a472910a8f7ba59e8",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.one/0.1.1.json"
+          },
+          "manifestSha256": "0635f27691dc743a93f57c28a12575bb28f9d8ff63dd6d985234c4fbf439b00d",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.one/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:16:51.206640+00:00",
+          "version": "0.1.1"
         }
       ]
     },

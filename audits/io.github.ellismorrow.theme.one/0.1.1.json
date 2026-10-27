@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color manifest and deterministic checker report",
+      "Manifest and documentation consistency",
+      "Malicious intent, hidden data channels, and denial of service",
+      "Dependencies and build scripts: none shown",
+      "External screenshot and documentation URLs",
+      "License and upstream provenance",
+      "Testing and screenshot claims",
+      "Host execution boundaries: inert allowlisted colors; no graph transformations or protocol operations"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The bundle includes only the declared One Dark README and package.json. Upstream palette files, upstream license text, and the separately cited One Light revision are absent.",
+        "impact": "The claimed palette derivation and preservation of both upstream copyright notices cannot be independently confirmed.",
+        "severity": "low",
+        "title": "Incomplete upstream provenance evidence"
+      },
+      {
+        "evidence": "README.md and docs/screenshots.md describe completed Windows testing, while docs/adaptation.md says user screenshots and full interaction acceptance are pending. The screenshot images and Chromium fixture are not supplied.",
+        "impact": "Application coverage and fixture results remain unverified, and the documentation contains a stale or conflicting testing statement.",
+        "severity": "low",
+        "title": "Screenshot and testing claims lack complete supporting evidence"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors and shows no executable payload or malicious behavior. Quarantine is warranted because provenance and testing claims cannot be fully verified from the supplied bundle.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:27:31.149Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "a028c49543fef0cd4aa64b9bf9d4bbc66a146c18b9a87e63c5e2d747c67e295f",
+      "sourceCommit": "3aa6fba5f9d77281f7cb755ad4f20f6d33128363"
+    },
+    "risk": "low",
+    "sha256": "a028c49543fef0cd4aa64b9bf9d4bbc66a146c18b9a87e63c5e2d747c67e295f",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.one",
+      "name": "One · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "3aa6fba5f9d77281f7cb755ad4f20f6d33128363",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:16:51.204665+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "782839b2c883320a1329f2cef377fc25148d47b3",
+    "number": 11
+  },
+  "submission": {
+    "commit": "3aa6fba5f9d77281f7cb755ad4f20f6d33128363",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.one",
+    "repository": "https://github.com/EllisMorrow/tine-theme-one-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
