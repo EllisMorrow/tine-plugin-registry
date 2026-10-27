@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.monokai",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-monokai-prism",
+  "commit": "7e1772340fa88b1794c22f34b779cdf877f6bfb9",
+  "manifestPath": "theme.json"
+}
