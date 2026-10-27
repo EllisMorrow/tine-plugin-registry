@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.tokyo-night",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-tokyo-night-prism",
+  "commit": "091b6a0968beb7676dee79c78b72975aef9f9e2f",
+  "manifestPath": "theme.json"
+}
