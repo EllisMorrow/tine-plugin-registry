@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.material",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-material-prism",
+  "commit": "884eed405fd10bdca2a34a56b593925c2beea30b",
+  "manifestPath": "theme.json"
+}
