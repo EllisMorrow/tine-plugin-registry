@@ -1,0 +1,75 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest and documentation consistency",
+      "Literal color values and inert host restrictions",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "External links and pinned screenshot references",
+      "License and provenance",
+      "Validation and screenshot claims",
+      "Graph transformations and protocol abuse: no executable plugin functionality present"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The README and adaptation notes explicitly state that the original upstream source of the referenced Codex preset has not been independently established.",
+        "impact": "The package includes an MIT license, but the provenance and licensing basis of the borrowed palette cannot be fully assessed from this bundle.",
+        "severity": "low",
+        "title": "Upstream provenance remains unresolved"
+      },
+      {
+        "evidence": "The documentation describes real application screenshots and Chromium fixture results, but the supplied bundle includes neither the images nor fixture code or raw results. The deterministic report corroborates format validation only.",
+        "impact": "Screenshot authenticity, privacy claims, and application testing coverage remain unverified.",
+        "severity": "info",
+        "title": "Screenshot and fixture claims lack supporting artifacts"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors consistent with the documented palettes, with no apparent malicious behavior. Unresolved upstream provenance and omitted validation artifacts prevent a complete review.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T13:40:08.118Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "8b37463454903629d49ac52e39e13740cc348c1dbf22aacb3ef15b0a6722d81d",
+      "sourceCommit": "4dd800966e3807a05717900e4427b43c102586a9"
+    },
+    "risk": "low",
+    "sha256": "8b37463454903629d49ac52e39e13740cc348c1dbf22aacb3ef15b0a6722d81d",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.raycast",
+      "name": "Raycast · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "4dd800966e3807a05717900e4427b43c102586a9",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:19:39.228642+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "ca7cce9b5417c6b7484d511bf2da52324f5e5ab7",
+    "number": 29
+  },
+  "submission": {
+    "commit": "4dd800966e3807a05717900e4427b43c102586a9",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.raycast",
+    "repository": "https://github.com/EllisMorrow/tine-theme-raycast-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

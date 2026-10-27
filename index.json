@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:19:29.795793+00:00",
+  "generatedAt": "2026-10-27T15:19:39.229409+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -856,6 +856,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:19:29.795782+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Raycast-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.raycast",
+      "license": "MIT",
+      "name": "Raycast · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-raycast-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:40:08.118Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "ac700673d8a14e3e12c40492b26ec216941c92b532bbec40bae703148c273bcd",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.raycast/0.1.1.json"
+          },
+          "manifestSha256": "09de1be12f49c08f0a7d35fdfd4fa7910ddc863b6898f2115c554c070780dcdc",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.raycast/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:19:39.229400+00:00",
           "version": "0.1.1"
         }
       ]
