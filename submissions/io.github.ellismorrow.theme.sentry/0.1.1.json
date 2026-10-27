@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.sentry",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-sentry-prism",
+  "commit": "a3a4ec3cfed0eb4578b48d234d8df4b72547b228",
+  "manifestPath": "theme.json"
+}
