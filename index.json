@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:17:49.251233+00:00",
+  "generatedAt": "2026-10-27T15:17:59.512100+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -260,6 +260,36 @@
   "revocations": [],
   "schemaVersion": 1,
   "themes": [
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Absolutely-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.absolutely",
+      "license": "MIT",
+      "name": "Absolutely · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-absolutely-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:00:05.954Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "0ab2d086d7ca54ef97f70d86dcdc8f97660ee5174cefe57786021d74b8c874ae",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.absolutely/0.1.1.json"
+          },
+          "manifestSha256": "fe94f67a29af1203107bac6459c2488e7fc6230d1680bceadb8bf7b458decb7f",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.absolutely/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:17:59.512090+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
     {
       "aiDevelopment": "primary",
       "description": "A paired Ayu Light and Ayu Dark palette for Tine, balancing bright paper, quiet graphite surfaces and warm amber accents.",

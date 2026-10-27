@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color values and manifest/documentation consistency",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script exposure",
+      "Denial of service and hidden data channels",
+      "External metadata and screenshot URLs",
+      "License and provenance",
+      "Validation claims and evidence",
+      "Inert theme execution boundary; graph transformations and plugin protocols are inapplicable"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "README.md and docs/adaptation.md explicitly state that the original upstream source of the referenced Codex preset has not been independently established.",
+        "impact": "The MIT license covers the claimed independent adaptation, but the bundle does not fully establish the reference palette's provenance.",
+        "severity": "low",
+        "title": "Upstream provenance remains unresolved"
+      },
+      {
+        "evidence": "Documentation claims real, unedited screenshots and Chromium fixture results, but image contents and fixture source/results are absent. The supplied deterministic report supports the manifest format check only.",
+        "impact": "Screenshot authenticity, visible privacy, and broader testing claims remain unverified.",
+        "severity": "info",
+        "title": "Some validation claims cannot be verified from the bundle"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors and shows no malicious behavior. Quarantine is required because upstream provenance and supporting screenshot/test evidence remain unresolved.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T13:00:05.954Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "9cd9ed2c3f1310b983b3a616216650a5793a55119a73591ca91208472d2aab74",
+      "sourceCommit": "14f3b5194ef7ff5398cc1830d75203181feee825"
+    },
+    "risk": "low",
+    "sha256": "9cd9ed2c3f1310b983b3a616216650a5793a55119a73591ca91208472d2aab74",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.absolutely",
+      "name": "Absolutely · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "14f3b5194ef7ff5398cc1830d75203181feee825",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:17:59.511405+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "eb100db9e5422a04d716ae79e11e4acdf5aa8bcd",
+    "number": 19
+  },
+  "submission": {
+    "commit": "14f3b5194ef7ff5398cc1830d75203181feee825",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.absolutely",
+    "repository": "https://github.com/EllisMorrow/tine-theme-absolutely-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
