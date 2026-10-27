@@ -1,0 +1,75 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "A complete Latte and Mocha palette pair for Tine, with soft cream and blue-night surfaces, lavender accents, blue links and warm highlights.",
+  "id": "io.github.ellismorrow.theme.catppuccin",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#383a50",
+      "--ls-active-primary-color": "#cba6f7",
+      "--ls-block-bullet-color": "#9399b2",
+      "--ls-block-highlight-color": "#383a50",
+      "--ls-border-color": "rgba(205, 214, 244, 0.12)",
+      "--ls-guideline-color": "rgba(205, 214, 244, 0.18)",
+      "--ls-link-text-color": "#8eb7fa",
+      "--ls-link-text-hover-color": "#cdd6f4",
+      "--ls-page-inline-code-bg-color": "#313244",
+      "--ls-page-inline-code-color": "#cdd6f4",
+      "--ls-page-mark-bg-color": "#4a4548",
+      "--ls-page-mark-color": "#f9e2af",
+      "--ls-primary-background-color": "#1e1e2e",
+      "--ls-primary-text-color": "#cdd6f4",
+      "--ls-quaternary-background-color": "#313244",
+      "--ls-secondary-background-color": "#181825",
+      "--ls-secondary-text-color": "#bac2de",
+      "--ls-selection-background-color": "#383a50",
+      "--ls-tag-text-color": "#cba6f7",
+      "--ls-tertiary-background-color": "#292a3d",
+      "--ls-title-text-color": "#cdd6f4"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#e1e3ed",
+      "--ls-active-primary-color": "#8839ef",
+      "--ls-block-bullet-color": "#7c7f93",
+      "--ls-block-highlight-color": "#e1e3ed",
+      "--ls-border-color": "rgba(76, 79, 105, 0.16)",
+      "--ls-guideline-color": "rgba(76, 79, 105, 0.2)",
+      "--ls-link-text-color": "#1852c8",
+      "--ls-link-text-hover-color": "#4c4f69",
+      "--ls-page-inline-code-bg-color": "#dce0e8",
+      "--ls-page-inline-code-color": "#4c4f69",
+      "--ls-page-mark-bg-color": "#ecddca",
+      "--ls-page-mark-color": "#4c4f69",
+      "--ls-primary-background-color": "#eff1f5",
+      "--ls-primary-text-color": "#4c4f69",
+      "--ls-quaternary-background-color": "#d6dae4",
+      "--ls-secondary-background-color": "#e6e9ef",
+      "--ls-secondary-text-color": "#565971",
+      "--ls-selection-background-color": "#d4d6e3",
+      "--ls-tag-text-color": "#7632d0",
+      "--ls-tertiary-background-color": "#dce0e8",
+      "--ls-title-text-color": "#4c4f69"
+    }
+  },
+  "name": "Catppuccin · Prism",
+  "portedFrom": {
+    "authors": [
+      "Catppuccin"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "Catppuccin Latte / Mocha",
+    "relationship": "behavioral-port",
+    "revision": "07d02aa110ef9eb7e7427afca5c73ba9cf7f8ebd",
+    "source": "https://github.com/catppuccin/palette"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-catppuccin-prism/abbeae2761d2e27b44506592df9dfdb7381c58b5/docs/catppuccin-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-catppuccin-prism/abbeae2761d2e27b44506592df9dfdb7381c58b5/docs/catppuccin-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-catppuccin-prism",
+  "version": "0.1.1"
+}

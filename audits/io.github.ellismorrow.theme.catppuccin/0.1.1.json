@@ -1,0 +1,68 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color values and manifest/documentation consistency",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "External metadata and screenshot URLs",
+      "MIT license retention and declared provenance",
+      "Validation claims and source completeness",
+      "Host execution boundaries; plugin graph and protocol behavior not applicable"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The pinned upstream palette.json, screenshot images, and Chromium fixture/results are absent. Documentation also associates the palettes with Codex without supporting evidence. The deterministic report supports the manifest format check only.",
+        "impact": "Exact palette derivation, screenshot authenticity, and claimed application and contrast testing cannot be independently confirmed from this bundle.",
+        "severity": "low",
+        "title": "Provenance and validation claims are only partially supported"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "No malicious behavior is evident in the literal-color manifest. Quarantine is warranted because the supplied bundle does not substantiate several provenance and validation claims.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T10:20:05.890Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "d324aa06d65661c4491cf5866d9024fc9811e8240d775ac7c7e589aa37820dd3",
+      "sourceCommit": "52ec7949f3371c474dc3ce163e1daa5f6cd75544"
+    },
+    "risk": "low",
+    "sha256": "d324aa06d65661c4491cf5866d9024fc9811e8240d775ac7c7e589aa37820dd3",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.catppuccin",
+      "name": "Catppuccin · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "52ec7949f3371c474dc3ce163e1daa5f6cd75544",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:15:55.308572+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "089623c6554ddcdcd7d091e3d684245125a2b9df",
+    "number": 6
+  },
+  "submission": {
+    "commit": "52ec7949f3371c474dc3ce163e1daa5f6cd75544",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.catppuccin",
+    "repository": "https://github.com/EllisMorrow/tine-theme-catppuccin-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

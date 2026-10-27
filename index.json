@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:15:45.297996+00:00",
+  "generatedAt": "2026-10-27T15:15:55.309384+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -260,6 +260,36 @@
   "revocations": [],
   "schemaVersion": 1,
   "themes": [
+    {
+      "aiDevelopment": "primary",
+      "description": "A complete Latte and Mocha palette pair for Tine, with soft cream and blue-night surfaces, lavender accents, blue links and warm highlights.",
+      "id": "io.github.ellismorrow.theme.catppuccin",
+      "license": "MIT",
+      "name": "Catppuccin · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-catppuccin-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T10:20:05.890Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "a20104cc9a7029170ee98149d6b7fde13a7d8eea4faf8f7ed735f6ab06b05ea7",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.catppuccin/0.1.1.json"
+          },
+          "manifestSha256": "9300fc4fe3b617e3875228730301edc8d4545047ec53ee9819b61fc809167b3d",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.catppuccin/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:15:55.309368+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
     {
       "aiDevelopment": "primary",
       "description": "A complete light and dark Tine palette inspired by Dracula and its Alucard companion: warm paper by day, violet night, cyan links and rose-pink tags.",
