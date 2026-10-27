@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.lobster",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-lobster-prism",
+  "commit": "f347010197939bccafc57e0192d2bd67c19b46b3",
+  "manifestPath": "theme.json"
+}
