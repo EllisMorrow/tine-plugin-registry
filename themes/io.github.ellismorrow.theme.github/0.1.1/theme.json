@@ -1,0 +1,75 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "A GitHub Light Default and Dark Default pair for Tine, adapted from Primer’s familiar neutral surfaces and blue interaction colors.",
+  "id": "io.github.ellismorrow.theme.github",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#1f3a5f",
+      "--ls-active-primary-color": "#4493f8",
+      "--ls-block-bullet-color": "#6e7681",
+      "--ls-block-highlight-color": "#1f3a5f",
+      "--ls-border-color": "rgba(240, 246, 252, 0.10)",
+      "--ls-guideline-color": "rgba(240, 246, 252, 0.15)",
+      "--ls-link-text-color": "#4493f8",
+      "--ls-link-text-hover-color": "#79c0ff",
+      "--ls-page-inline-code-bg-color": "#21262d",
+      "--ls-page-inline-code-color": "#e6edf3",
+      "--ls-page-mark-bg-color": "#3d3420",
+      "--ls-page-mark-color": "#f0f6fc",
+      "--ls-primary-background-color": "#0d1117",
+      "--ls-primary-text-color": "#e6edf3",
+      "--ls-quaternary-background-color": "#21262d",
+      "--ls-secondary-background-color": "#010409",
+      "--ls-secondary-text-color": "#9198a1",
+      "--ls-selection-background-color": "#1f3a5f",
+      "--ls-tag-text-color": "#a371f7",
+      "--ls-tertiary-background-color": "#161b22",
+      "--ls-title-text-color": "#e6edf3"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#ddf4ff",
+      "--ls-active-primary-color": "#0969da",
+      "--ls-block-bullet-color": "#8c959f",
+      "--ls-block-highlight-color": "#ddf4ff",
+      "--ls-border-color": "rgba(31, 35, 40, 0.15)",
+      "--ls-guideline-color": "rgba(31, 35, 40, 0.20)",
+      "--ls-link-text-color": "#0969da",
+      "--ls-link-text-hover-color": "#0550ae",
+      "--ls-page-inline-code-bg-color": "#eff1f3",
+      "--ls-page-inline-code-color": "#1f2328",
+      "--ls-page-mark-bg-color": "#fff8c5",
+      "--ls-page-mark-color": "#1f2328",
+      "--ls-primary-background-color": "#ffffff",
+      "--ls-primary-text-color": "#1f2328",
+      "--ls-quaternary-background-color": "#d8dee4",
+      "--ls-secondary-background-color": "#f6f8fa",
+      "--ls-secondary-text-color": "#59636e",
+      "--ls-selection-background-color": "#ddf4ff",
+      "--ls-tag-text-color": "#8250df",
+      "--ls-tertiary-background-color": "#eaeef2",
+      "--ls-title-text-color": "#1f2328"
+    }
+  },
+  "name": "GitHub · Prism",
+  "portedFrom": {
+    "authors": [
+      "GitHub Primer"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "GitHub Light Default / GitHub Dark Default",
+    "relationship": "behavioral-port",
+    "revision": "cd78e5e4e7bcf132a6f428ae0f32264bb1b729cf",
+    "source": "https://github.com/primer/github-vscode-theme"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-github-prism/1ece87037587ab6f30f4869e4469e46a4474d906/docs/github-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-github-prism/1ece87037587ab6f30f4869e4469e46a4474d906/docs/github-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-github-prism",
+  "version": "0.1.1"
+}

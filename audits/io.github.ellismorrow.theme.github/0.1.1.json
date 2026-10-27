@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color manifest and deterministic checker report",
+      "Malicious intent, deception and manifest/source consistency",
+      "Dependency and build-script exposure: upstream development scripts are not invoked by this inert package",
+      "Denial of service and hidden data channels",
+      "External screenshot and documentation URLs",
+      "MIT notices, attribution and provenance",
+      "Testing and accessibility claim boundaries",
+      "Graph transformations and protocol abuse: no executable plugin behavior present"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The READMEs and docs/screenshots.md claim completed Windows testing and real screenshots, but the images are absent from the supplied bundle. docs/adaptation.md still says user screenshots and full interaction acceptance are pending.",
+        "impact": "Screenshot authenticity, privacy claims and application coverage cannot be confirmed; documentation gives conflicting accounts of validation.",
+        "severity": "low",
+        "title": "Screenshot and testing claims are not fully supported"
+      },
+      {
+        "evidence": "The supplied upstream README, manifest and MIT license support the declared theme names and licensing, but upstream palette files and implementation are absent. Adaptation notes explicitly acknowledge independent mappings.",
+        "impact": "The precise relationship between the supplied colors and the pinned upstream revision cannot be verified.",
+        "severity": "low",
+        "title": "Pinned palette provenance is only partially substantiated"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors and shows no malicious behavior. However, missing supporting assets and conflicting testing claims prevent a complete review.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:28:33.758Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "251e45ca188d4b62ce7fdab705fa118982a015579775575f091f5536ad63c73a",
+      "sourceCommit": "f9a8c2992feffa00e1f38c89e2820c049319aa74"
+    },
+    "risk": "low",
+    "sha256": "251e45ca188d4b62ce7fdab705fa118982a015579775575f091f5536ad63c73a",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.github",
+      "name": "GitHub · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "f9a8c2992feffa00e1f38c89e2820c049319aa74",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:16:31.970413+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "d2a838a62c264a4893aea2dbdf607c9e824863a8",
+    "number": 9
+  },
+  "submission": {
+    "commit": "f9a8c2992feffa00e1f38c89e2820c049319aa74",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.github",
+    "repository": "https://github.com/EllisMorrow/tine-theme-github-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

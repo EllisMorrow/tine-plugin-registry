@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:16:23.588543+00:00",
+  "generatedAt": "2026-10-27T15:16:31.971060+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -346,6 +346,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:16:10.708154+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A GitHub Light Default and Dark Default pair for Tine, adapted from Primer’s familiar neutral surfaces and blue interaction colors.",
+      "id": "io.github.ellismorrow.theme.github",
+      "license": "MIT",
+      "name": "GitHub · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-github-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:28:33.758Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "cf5ee0684d750792d3a209d0e9d7324f1fc81752f034d60c1cdcf55727f88bee",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.github/0.1.1.json"
+          },
+          "manifestSha256": "19063f26b7148a0ad593e02a7ef5bf63ac40e4ed863d62fda366f79382a85aed",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.github/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:16:31.971052+00:00",
           "version": "0.1.1"
         }
       ]
