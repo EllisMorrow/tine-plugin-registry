@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.gruvbox",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-gruvbox-prism",
+  "commit": "4e0f1fda19ebe948bafc204b1f9a09a3941c9bfa",
+  "manifestPath": "theme.json"
+}
