@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:18:49.408397+00:00",
+  "generatedAt": "2026-10-27T15:18:58.883609+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -707,6 +707,36 @@
           ],
           "publishedAt": "2026-10-27T15:15:06.227481+00:00",
           "version": "0.2.0"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Notion-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.notion",
+      "license": "MIT",
+      "name": "Notion · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-notion-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:25:09.810Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "cbc342618632116ef89bd04e13e1a82580eaf016418cef1489b9af184fa3905d",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.notion/0.1.1.json"
+          },
+          "manifestSha256": "5d94c91b29dfc54a4087081eb451187b54603c9becd2c8ae79e5f3fa42823335",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.notion/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:18:58.883593+00:00",
+          "version": "0.1.1"
         }
       ]
     },

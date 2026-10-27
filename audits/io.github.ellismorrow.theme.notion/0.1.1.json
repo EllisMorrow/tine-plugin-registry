@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal-color manifest and documentation consistency",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "License and provenance",
+      "Validation and screenshot claims",
+      "Host execution restrictions",
+      "Graph transformations and protocol abuse applicability"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "README.md and docs/adaptation.md state that colors were extracted from an installed Codex preset whose original upstream source has not been independently established.",
+        "impact": "The package includes an MIT license, but the supplied evidence does not fully establish the provenance or licensing basis of the referenced palette.",
+        "severity": "low",
+        "title": "Upstream provenance remains unresolved"
+      },
+      {
+        "evidence": "Documentation claims matching, unedited Windows screenshots and application coverage, but the referenced PNG files and underlying test artifacts are absent from the supplied bundle.",
+        "impact": "These claims remain unverified. The deterministic checker supports manifest validity, but does not establish screenshot authenticity or application-test coverage.",
+        "severity": "low",
+        "title": "Screenshot and application-testing claims cannot be verified"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only supported literal colors and matches the reported checker digest. No malicious behavior is evident. Unresolved upstream provenance and omitted screenshot assets prevent a complete review.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T13:25:09.810Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "fce69f199745cf623154f2e010a0422174bb76d02bacd0d118b89646cdc01a95",
+      "sourceCommit": "6778ced6b0d08053bfb7b88736a30acf57285e62"
+    },
+    "risk": "low",
+    "sha256": "fce69f199745cf623154f2e010a0422174bb76d02bacd0d118b89646cdc01a95",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.notion",
+      "name": "Notion · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "6778ced6b0d08053bfb7b88736a30acf57285e62",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:18:58.882891+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "da5d2b6b9f66891bd1f2d48db9e2819c40157524",
+    "number": 25
+  },
+  "submission": {
+    "commit": "6778ced6b0d08053bfb7b88736a30acf57285e62",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.notion",
+    "repository": "https://github.com/EllisMorrow/tine-theme-notion-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
