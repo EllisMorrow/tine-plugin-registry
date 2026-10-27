@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.catppuccin",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-catppuccin-prism",
+  "commit": "52ec7949f3371c474dc3ce163e1daa5f6cd75544",
+  "manifestPath": "theme.json"
+}
