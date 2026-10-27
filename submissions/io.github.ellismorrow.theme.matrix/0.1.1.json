@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.matrix",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-matrix-prism",
+  "commit": "e86faab3c85ed56161e5bf4fce354cdc43793f0d",
+  "manifestPath": "theme.json"
+}
