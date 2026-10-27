@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.temple",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-temple-prism",
+  "commit": "9ac15b197724d12914c7067ed136ebb2b9aab94c",
+  "manifestPath": "theme.json"
+}
