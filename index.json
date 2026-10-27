@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:18:25.591334+00:00",
+  "generatedAt": "2026-10-27T15:18:38.904222+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -586,6 +586,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:17:30.773308+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Matrix-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.matrix",
+      "license": "MIT",
+      "name": "Matrix · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-matrix-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:15:27.548Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "ae53eb8ece9b717e8cc038fde057e1d7f36ff7701c796fbb47751b2b1034bc7d",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.matrix/0.1.1.json"
+          },
+          "manifestSha256": "025da6a6d95d445b0a79b8190b90d0b5ad228b8e2a16c3c90ee31e6482f603bd",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.matrix/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:18:38.904183+00:00",
           "version": "0.1.1"
         }
       ]
