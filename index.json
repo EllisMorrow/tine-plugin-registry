@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:18:16.976632+00:00",
+  "generatedAt": "2026-10-27T15:18:25.591334+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -526,6 +526,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:18:16.976621+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Lobster-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.lobster",
+      "license": "MIT",
+      "name": "Lobster · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-lobster-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:10:07.588Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "6dd3ed162c8849e16898c584956a38544e827f6035ee7ac1363d18f1310337a9",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.lobster/0.1.1.json"
+          },
+          "manifestSha256": "dad741dda1adf4bf865e61e05594b40e1dd24cae061dcca1ebd09e490982b7ef",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.lobster/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:18:25.591325+00:00",
           "version": "0.1.1"
         }
       ]

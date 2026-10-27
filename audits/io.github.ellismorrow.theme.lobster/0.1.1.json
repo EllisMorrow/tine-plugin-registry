@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color allowlist and inert host execution model",
+      "Manifest and documentation consistency",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "License and provenance",
+      "Validation and screenshot claims",
+      "External metadata URLs"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "README.md and docs/adaptation.md explicitly state that the original upstream source of the referenced Codex preset has not been independently established.",
+        "impact": "The package includes an MIT license, but the reference palette's provenance and any applicable attribution obligations remain uncertain.",
+        "severity": "low",
+        "title": "Upstream provenance remains unresolved"
+      },
+      {
+        "evidence": "The bundle includes screenshot URLs and test summaries, but no image contents or Chromium fixture source/results beyond the written summary. The deterministic report supports the format-check claim only.",
+        "impact": "Real-application appearance, screenshot authenticity, and fixture coverage cannot be independently confirmed from this bundle.",
+        "severity": "info",
+        "title": "Screenshot and fixture claims lack supporting artifacts"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors and matches the documented palettes. No malicious behavior is evident, but provenance and screenshot claims cannot be fully established from the supplied bundle.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T13:10:07.588Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "fe9e5be105278248da29a469daa71a006bfe0b9190eb661c4206f42545ab7113",
+      "sourceCommit": "f347010197939bccafc57e0192d2bd67c19b46b3"
+    },
+    "risk": "low",
+    "sha256": "fe9e5be105278248da29a469daa71a006bfe0b9190eb661c4206f42545ab7113",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.lobster",
+      "name": "Lobster · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "f347010197939bccafc57e0192d2bd67c19b46b3",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:18:25.590638+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "3881e5c16722e3b59c1d603d782d68da2667c717",
+    "number": 22
+  },
+  "submission": {
+    "commit": "f347010197939bccafc57e0192d2bd67c19b46b3",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.lobster",
+    "repository": "https://github.com/EllisMorrow/tine-theme-lobster-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
