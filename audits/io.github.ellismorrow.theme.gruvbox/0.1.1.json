@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest and literal color allowlist",
+      "Malicious intent and deceptive behavior",
+      "Manifest/source consistency",
+      "Dependencies and build scripts",
+      "Denial of service and hidden data channels",
+      "License and upstream provenance",
+      "Documentation and validation claims",
+      "Theme execution boundaries"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The adaptation cites upstream colors/gruvbox.vim, but the supplied upstream bundle contains only README.md and package.json.",
+        "impact": "The upstream MIT declaration is supported, but the claimed palette derivation cannot be independently checked from the supplied source.",
+        "severity": "low",
+        "title": "Palette provenance cannot be fully verified"
+      },
+      {
+        "evidence": "README.md and docs/screenshots.md assert completed Windows screenshot testing, while docs/adaptation.md says user screenshots and full interaction acceptance are pending. Screenshot images and Chromium fixture source/results are absent.",
+        "impact": "The deterministic format check is supported by the provided report; screenshot authenticity and broader testing claims remain unverified.",
+        "severity": "low",
+        "title": "Application validation claims are incomplete and inconsistent"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only inert literal colors and shows no malicious behavior. Quarantine is warranted because the supplied bundle does not substantiate palette provenance and screenshot/testing claims, and validation documentation conflicts.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:28:01.545Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "0935c49861d65c75c55b0ac793c99ad3cd7aaa4abbcd2c4aa392a48f2d3c9fab",
+      "sourceCommit": "4e0f1fda19ebe948bafc204b1f9a09a3941c9bfa"
+    },
+    "risk": "low",
+    "sha256": "0935c49861d65c75c55b0ac793c99ad3cd7aaa4abbcd2c4aa392a48f2d3c9fab",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.gruvbox",
+      "name": "Gruvbox · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "4e0f1fda19ebe948bafc204b1f9a09a3941c9bfa",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:16:41.003577+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "907fe330f0258dd40d931bd4e4cda8088b177ee4",
+    "number": 10
+  },
+  "submission": {
+    "commit": "4e0f1fda19ebe948bafc204b1f9a09a3941c9bfa",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.gruvbox",
+    "repository": "https://github.com/EllisMorrow/tine-theme-gruvbox-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

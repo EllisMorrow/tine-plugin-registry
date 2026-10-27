@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:16:31.971060+00:00",
+  "generatedAt": "2026-10-27T15:16:41.004232+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -376,6 +376,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:16:31.971052+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A complete light and dark Gruvbox palette for Tine, pairing warm paper and retro groove colors with an earthy, quiet night.",
+      "id": "io.github.ellismorrow.theme.gruvbox",
+      "license": "MIT",
+      "name": "Gruvbox · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-gruvbox-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:28:01.545Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "7434836d9b0aeaac83c5872702efb321c8352a0b25b7069499a92a9e50cff2f7",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.gruvbox/0.1.1.json"
+          },
+          "manifestSha256": "10bc5908e46857394fdbf4318c11fa26af1b9e406d01d8da313e33c2d054d2b9",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.gruvbox/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:16:41.004223+00:00",
           "version": "0.1.1"
         }
       ]
