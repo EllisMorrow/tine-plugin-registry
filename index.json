@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:17:30.773317+00:00",
+  "generatedAt": "2026-10-27T15:17:39.880271+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -466,6 +466,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:17:30.773308+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Night Owl and Night Owl Light paired for Tine: deep blue-black nights and cool, open daytime pages, threaded with violet and teal.",
+      "id": "io.github.ellismorrow.theme.night-owl",
+      "license": "MIT",
+      "name": "Night Owl · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-night-owl-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:45:06.226Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "c26ca0de79b5663a4a4142e56ec6f8bb6afd527e5756be2f6cfa5312e15e1037",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.night-owl/0.1.1.json"
+          },
+          "manifestSha256": "241639094e606c9ff971d032b97daf75ff9918f8832e500cd9d80ca9bab5ee6a",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.night-owl/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:17:39.880263+00:00",
           "version": "0.1.1"
         }
       ]

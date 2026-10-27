@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest and literal color values",
+      "Malicious intent and deceptive behavior",
+      "Manifest and documentation consistency",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "License and upstream provenance",
+      "Validation and screenshot claims",
+      "Host execution boundaries"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "README.md and docs/screenshots.md assert completed Windows screenshot testing, while docs/adaptation.md states that user screenshots and full interaction acceptance are pending. The referenced PNG files are absent from the supplied bundle.",
+        "impact": "Actual application coverage and screenshot contents cannot be established.",
+        "severity": "low",
+        "title": "Conflicting screenshot validation claims"
+      },
+      {
+        "evidence": "The supplied upstream LICENSE and package.json support MIT licensing, attribution and the existence of both variants, but the referenced upstream palette JSON files are absent.",
+        "impact": "The claimed palette derivation at the pinned revision cannot be independently checked from this bundle.",
+        "severity": "low",
+        "title": "Upstream palette provenance is only partially supported"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors and shows no malicious behavior. Quarantine is warranted because screenshot and palette-provenance claims cannot be verified from the supplied bundle, and testing documentation conflicts.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:45:06.226Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "1a92a3b436c999a2d0a733db68dac0ac56e0d0432e4aa6527a6adf31295a2d28",
+      "sourceCommit": "b9d1a53a778cd6ec930ab4e6b13ec75c8064d342"
+    },
+    "risk": "low",
+    "sha256": "1a92a3b436c999a2d0a733db68dac0ac56e0d0432e4aa6527a6adf31295a2d28",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.night-owl",
+      "name": "Night Owl · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "b9d1a53a778cd6ec930ab4e6b13ec75c8064d342",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:17:39.879598+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "db448a7fe76d62904b82b3a465d0a96959c04f71",
+    "number": 17
+  },
+  "submission": {
+    "commit": "b9d1a53a778cd6ec930ab4e6b13ec75c8064d342",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.night-owl",
+    "repository": "https://github.com/EllisMorrow/tine-theme-night-owl-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

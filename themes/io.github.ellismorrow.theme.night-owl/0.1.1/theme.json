@@ -1,0 +1,75 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "Night Owl and Night Owl Light paired for Tine: deep blue-black nights and cool, open daytime pages, threaded with violet and teal.",
+  "id": "io.github.ellismorrow.theme.night-owl",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#0e293f",
+      "--ls-active-primary-color": "#7e57c2",
+      "--ls-block-bullet-color": "#5f7e97",
+      "--ls-block-highlight-color": "#0e293f",
+      "--ls-border-color": "rgba(214, 222, 235, 0.14)",
+      "--ls-guideline-color": "rgba(214, 222, 235, 0.18)",
+      "--ls-link-text-color": "#82aaff",
+      "--ls-link-text-hover-color": "#c5e4fd",
+      "--ls-page-inline-code-bg-color": "#0b253a",
+      "--ls-page-inline-code-color": "#d6deeb",
+      "--ls-page-mark-bg-color": "#3b3d47",
+      "--ls-page-mark-color": "#d6deeb",
+      "--ls-primary-background-color": "#011627",
+      "--ls-primary-text-color": "#d6deeb",
+      "--ls-quaternary-background-color": "#0b2942",
+      "--ls-secondary-background-color": "#00111d",
+      "--ls-secondary-text-color": "#89a4bb",
+      "--ls-selection-background-color": "#1d3b53",
+      "--ls-tag-text-color": "#c792ea",
+      "--ls-tertiary-background-color": "#0b253a",
+      "--ls-title-text-color": "#d6deeb"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#d3e8f8",
+      "--ls-active-primary-color": "#2aa298",
+      "--ls-block-bullet-color": "#90a7b2",
+      "--ls-block-highlight-color": "#d3e8f8",
+      "--ls-border-color": "rgba(64, 63, 83, 0.16)",
+      "--ls-guideline-color": "rgba(64, 63, 83, 0.20)",
+      "--ls-link-text-color": "#994cc3",
+      "--ls-link-text-hover-color": "#70349a",
+      "--ls-page-inline-code-bg-color": "#f0f0f0",
+      "--ls-page-inline-code-color": "#403f53",
+      "--ls-page-mark-bg-color": "#f5edc8",
+      "--ls-page-mark-color": "#403f53",
+      "--ls-primary-background-color": "#fbfbfb",
+      "--ls-primary-text-color": "#403f53",
+      "--ls-quaternary-background-color": "#d9d9d9",
+      "--ls-secondary-background-color": "#f0f0f0",
+      "--ls-secondary-text-color": "#5d5d72",
+      "--ls-selection-background-color": "#e0e0e0",
+      "--ls-tag-text-color": "#017a70",
+      "--ls-tertiary-background-color": "#e8e8e8",
+      "--ls-title-text-color": "#403f53"
+    }
+  },
+  "name": "Night Owl · Prism",
+  "portedFrom": {
+    "authors": [
+      "Sarah Drasner"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "Night Owl / Night Owl Light",
+    "relationship": "behavioral-port",
+    "revision": "f260cea5356261337d18809bdbe922952c7a6fa4",
+    "source": "https://github.com/sdras/night-owl-vscode-theme"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-night-owl-prism/8769afaddc254dc6722793b10c0673387723f8a3/docs/night-owl-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-night-owl-prism/8769afaddc254dc6722793b10c0673387723f8a3/docs/night-owl-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-night-owl-prism",
+  "version": "0.1.1"
+}
