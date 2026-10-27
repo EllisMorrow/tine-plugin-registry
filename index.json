@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:19:19.210702+00:00",
+  "generatedAt": "2026-10-27T15:19:29.795793+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -826,6 +826,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:19:19.210691+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Proof-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.proof",
+      "license": "MIT",
+      "name": "Proof · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-proof-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:40:27.764Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "9f6ffbafee8533563c2eac25d2718f07e0a6d8ee0bda01ac4cb6860f7bf80458",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.proof/0.1.1.json"
+          },
+          "manifestSha256": "392e155a3a990a45b11f74f1a22574fd36708be93d7941b8299d626f5218b530",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.proof/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:19:29.795782+00:00",
           "version": "0.1.1"
         }
       ]
