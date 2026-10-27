@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.codex",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-codex-prism",
+  "commit": "60608d754c873be6c39b728dae311e12f559cc04",
+  "manifestPath": "theme.json"
+}
