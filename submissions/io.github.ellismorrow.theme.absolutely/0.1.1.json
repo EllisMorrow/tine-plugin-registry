@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.absolutely",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-absolutely-prism",
+  "commit": "14f3b5194ef7ff5398cc1830d75203181feee825",
+  "manifestPath": "theme.json"
+}
