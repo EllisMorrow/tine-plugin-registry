@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:44:49.681523+00:00",
+  "generatedAt": "2026-10-27T15:15:06.227490+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -260,6 +260,36 @@
   "revocations": [],
   "schemaVersion": 1,
   "themes": [
+    {
+      "aiDevelopment": "primary",
+      "description": "A light and dark Nord palette adaptation for Tine: Snow Storm surfaces by day, polar blue-gray by night, with blue/cyan links, violet tags and amber highlights.",
+      "id": "io.github.ellismorrow.theme.nord",
+      "license": "MIT",
+      "name": "Nord · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-nord-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T03:25:09.365Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "aeee3f8961e70f5d59ca068dae4974d3e11f0412bc7d8db568d7ebe731058509",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.nord/0.2.0.json"
+          },
+          "manifestSha256": "2cdf357e4cb10ce471ecbbe545ca2ee34f7857796607ac5d726860d42252aadf",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.nord/0.2.0/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:15:06.227481+00:00",
+          "version": "0.2.0"
+        }
+      ]
+    },
     {
       "aiDevelopment": "primary",
       "description": "A color-only Tine port of Logseq Dev Theme's light and dark palettes. Fonts, layout, and bullet-threading CSS are intentionally excluded.",

@@ -1,0 +1,75 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "A light and dark Nord palette adaptation for Tine: Snow Storm surfaces by day, polar blue-gray by night, with blue/cyan links, violet tags and amber highlights.",
+  "id": "io.github.ellismorrow.theme.nord",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#28383d",
+      "--ls-active-primary-color": "#88c0d0",
+      "--ls-block-bullet-color": "rgba(216, 222, 233, 0.71)",
+      "--ls-block-highlight-color": "#28383d",
+      "--ls-border-color": "rgba(216, 222, 233, 0.084)",
+      "--ls-guideline-color": "rgba(216, 222, 233, 0.156)",
+      "--ls-link-text-color": "rgb(182, 217, 226)",
+      "--ls-link-text-hover-color": "#d8dee9",
+      "--ls-page-inline-code-bg-color": "#3a404c",
+      "--ls-page-inline-code-color": "#d8dee9",
+      "--ls-page-mark-bg-color": "rgba(235, 203, 139, 0.18)",
+      "--ls-page-mark-color": "#ebcb8b",
+      "--ls-primary-background-color": "#2e3440",
+      "--ls-primary-text-color": "#d8dee9",
+      "--ls-quaternary-background-color": "rgb(61, 67, 79)",
+      "--ls-secondary-background-color": "#272c36",
+      "--ls-secondary-text-color": "rgba(216, 222, 233, 0.71)",
+      "--ls-selection-background-color": "rgba(67, 76, 94, 0.8)",
+      "--ls-tag-text-color": "#b48ead",
+      "--ls-tertiary-background-color": "#3a404c",
+      "--ls-title-text-color": "#d8dee9"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#d7e3ec",
+      "--ls-active-primary-color": "#355f7c",
+      "--ls-block-bullet-color": "#65748a",
+      "--ls-block-highlight-color": "#d7e3ec",
+      "--ls-border-color": "rgba(76, 86, 106, 0.18)",
+      "--ls-guideline-color": "rgba(76, 86, 106, 0.22)",
+      "--ls-link-text-color": "#355f7c",
+      "--ls-link-text-hover-color": "#2e3440",
+      "--ls-page-inline-code-bg-color": "#d8dee9",
+      "--ls-page-inline-code-color": "#3b4252",
+      "--ls-page-mark-bg-color": "#ead6a4",
+      "--ls-page-mark-color": "#2e3440",
+      "--ls-primary-background-color": "#eceff4",
+      "--ls-primary-text-color": "#3b4252",
+      "--ls-quaternary-background-color": "#d0d6e2",
+      "--ls-secondary-background-color": "#e5e9f0",
+      "--ls-secondary-text-color": "#4c566a",
+      "--ls-selection-background-color": "#cad7e7",
+      "--ls-tag-text-color": "#754b76",
+      "--ls-tertiary-background-color": "#d8dee9",
+      "--ls-title-text-color": "#2e3440"
+    }
+  },
+  "name": "Nord · Prism",
+  "portedFrom": {
+    "authors": [
+      "Sven Greb"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "Nord",
+    "relationship": "behavioral-port",
+    "revision": "1cef71605416a222e57225b544540ce0fcec18d4",
+    "source": "https://github.com/nordtheme/nord"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-nord-prism/e1f2b02c44b9dff9d0bbe6907e50aee5e767c168/docs/nord-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-nord-prism/e1f2b02c44b9dff9d0bbe6907e50aee5e767c168/docs/nord-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-nord-prism",
+  "version": "0.2.0"
+}

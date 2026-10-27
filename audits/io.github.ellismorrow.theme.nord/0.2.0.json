@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Malicious intent and deceptive behavior",
+      "Manifest and documentation consistency",
+      "Literal-color allowlist and denial of service",
+      "Hidden data channels and external resource references",
+      "Dependency and build-script risk",
+      "License notices and declared upstream provenance",
+      "Unsupported testing and screenshot claims",
+      "Graph transformations and protocol abuse: no executable plugin behavior present"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "Documentation claims real Windows screenshots, Chromium mode-switch testing, measured contrasts, and unchanged dark tokens. Screenshot contents, fixture code/results, and the previous manifest are not supplied. The deterministic report supports format validation only.",
+        "impact": "These claims remain unverified; the supplied evidence does not establish deception, but is insufficient to resolve the requested review fully.",
+        "severity": "low",
+        "title": "Supporting evidence for validation claims is absent"
+      },
+      {
+        "evidence": "The declared upstream package includes a Husky prepare hook and development dependencies. The theme manifest references no executable dependencies or build steps, and the report marks build networking not applicable.",
+        "impact": "No installation-time execution risk is apparent under the stated inert-theme host model.",
+        "severity": "info",
+        "title": "Upstream development scripts do not affect theme installation"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors and shows no malicious behavior. Quarantine is required because screenshot and testing claims cannot be verified from the supplied bundle.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T03:25:09.365Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "9e1606ae14b7ef56e14450fab498aa500d63426db976da7da189346143f5bde4",
+      "sourceCommit": "276bf2e0d1fd1c64d33e29f2a9d3963a81091976"
+    },
+    "risk": "low",
+    "sha256": "9e1606ae14b7ef56e14450fab498aa500d63426db976da7da189346143f5bde4",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.nord",
+      "name": "Nord · Prism",
+      "version": "0.2.0"
+    },
+    "warnings": []
+  },
+  "commitVerified": "276bf2e0d1fd1c64d33e29f2a9d3963a81091976",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:15:06.226726+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "f8c3f94097e314db0518e4861eca99eaf49603ed",
+    "number": 4
+  },
+  "submission": {
+    "commit": "276bf2e0d1fd1c64d33e29f2a9d3963a81091976",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.nord",
+    "repository": "https://github.com/EllisMorrow/tine-theme-nord-prism",
+    "schemaVersion": 2,
+    "version": "0.2.0"
+  }
+}
