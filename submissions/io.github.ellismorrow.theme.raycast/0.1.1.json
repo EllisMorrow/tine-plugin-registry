@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.raycast",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-raycast-prism",
+  "commit": "4dd800966e3807a05717900e4427b43c102586a9",
+  "manifestPath": "theme.json"
+}
