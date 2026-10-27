@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest literal colors and consistency with documented palettes",
+      "Malicious intent and deceptive behavior",
+      "Executable code, dependency and build-script exposure",
+      "Denial of service and hidden data channels",
+      "External metadata and screenshot URLs",
+      "MIT license retention and upstream palette attribution",
+      "Validation claims and source sufficiency",
+      "Graph transformations and protocol abuse: not applicable to this inert theme"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "README.md and docs/screenshots.md assert completed Windows testing with unedited screenshots, but the images are absent from the supplied bundle. docs/adaptation.md still says user screenshots and full Tine interaction acceptance are pending.",
+        "impact": "Screenshot authenticity, coverage, and publication claims remain unverified.",
+        "severity": "low",
+        "title": "Screenshot evidence is missing and testing status is inconsistent"
+      },
+      {
+        "evidence": "The deterministic report supports the format-check result. Chromium fixture results are supplied only as prose, and no supplied Codex reference establishes the claimed theme-picker pairing.",
+        "impact": "The bundle does not substantiate all advertised testing and reference claims; this does not demonstrate malicious intent.",
+        "severity": "low",
+        "title": "Some validation and provenance claims lack supporting evidence"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors, with no apparent malicious payload or executable dependency path. Quarantine is required because screenshot and validation claims cannot be established from the supplied bundle, and documentation contradicts itself.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:28:56.434Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "30131024c83b7f7af2dce8121faf1775453f3e1a104f55288ff33c522812ac5f",
+      "sourceCommit": "a19693a892a2a384dc94c7f0e23d0b44ecb9e536"
+    },
+    "risk": "low",
+    "sha256": "30131024c83b7f7af2dce8121faf1775453f3e1a104f55288ff33c522812ac5f",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.rose-pine",
+      "name": "Rosé Pine · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "a19693a892a2a384dc94c7f0e23d0b44ecb9e536",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:16:23.587886+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "4e55698bbdd78b08a977834bc42522ff982b034d",
+    "number": 8
+  },
+  "submission": {
+    "commit": "a19693a892a2a384dc94c7f0e23d0b44ecb9e536",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.rose-pine",
+    "repository": "https://github.com/EllisMorrow/tine-theme-rose-pine-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

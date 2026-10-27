@@ -1,0 +1,75 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "A complete Dawn and Rosé Pine palette pair for Tine, with warm paper surfaces, dusky rose accents and a quiet violet-blue night.",
+  "id": "io.github.ellismorrow.theme.rose-pine",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#393552",
+      "--ls-active-primary-color": "#C4A7E7",
+      "--ls-block-bullet-color": "#908CAA",
+      "--ls-block-highlight-color": "#393552",
+      "--ls-border-color": "rgba(224, 222, 244, 0.12)",
+      "--ls-guideline-color": "rgba(224, 222, 244, 0.18)",
+      "--ls-link-text-color": "#9CCFD8",
+      "--ls-link-text-hover-color": "#E0DEF4",
+      "--ls-page-inline-code-bg-color": "#2a273f",
+      "--ls-page-inline-code-color": "#E0DEF4",
+      "--ls-page-mark-bg-color": "#393552",
+      "--ls-page-mark-color": "#F6C177",
+      "--ls-primary-background-color": "#232136",
+      "--ls-primary-text-color": "#E0DEF4",
+      "--ls-quaternary-background-color": "#393552",
+      "--ls-secondary-background-color": "#1e1c2e",
+      "--ls-secondary-text-color": "#B8B4D0",
+      "--ls-selection-background-color": "#44415a",
+      "--ls-tag-text-color": "#ea9a97",
+      "--ls-tertiary-background-color": "#2a273f",
+      "--ls-title-text-color": "#E0DEF4"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#F4EDE8",
+      "--ls-active-primary-color": "#907AA9",
+      "--ls-block-bullet-color": "#797593",
+      "--ls-block-highlight-color": "#F4EDE8",
+      "--ls-border-color": "rgba(70, 66, 97, 0.16)",
+      "--ls-guideline-color": "rgba(70, 66, 97, 0.2)",
+      "--ls-link-text-color": "#286983",
+      "--ls-link-text-hover-color": "#464261",
+      "--ls-page-inline-code-bg-color": "#F2E9E1",
+      "--ls-page-inline-code-color": "#464261",
+      "--ls-page-mark-bg-color": "#F5E7C9",
+      "--ls-page-mark-color": "#464261",
+      "--ls-primary-background-color": "#FAF4ED",
+      "--ls-primary-text-color": "#464261",
+      "--ls-quaternary-background-color": "#E8E3E0",
+      "--ls-secondary-background-color": "#FFFaf3",
+      "--ls-secondary-text-color": "#625E7A",
+      "--ls-selection-background-color": "#DFDAD9",
+      "--ls-tag-text-color": "#98566B",
+      "--ls-tertiary-background-color": "#F2E9E1",
+      "--ls-title-text-color": "#464261"
+    }
+  },
+  "name": "Rosé Pine · Prism",
+  "portedFrom": {
+    "authors": [
+      "Rosé Pine"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "Rosé Pine Dawn / Rosé Pine Moon",
+    "relationship": "behavioral-port",
+    "revision": "92af52b465ab6e47437aca223c9b8d3009a2023b",
+    "source": "https://github.com/rose-pine/rose-pine-palette"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-rose-pine-prism/42ba06a6857649e09d37474af953f400f8883a35/docs/rose-pine-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-rose-pine-prism/42ba06a6857649e09d37474af953f400f8883a35/docs/rose-pine-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-rose-pine-prism",
+  "version": "0.1.1"
+}
