@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.ayu",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-ayu-prism",
+  "commit": "fdf36e8c1c71c9a5f76e8e8fb47c0d43924ba351",
+  "manifestPath": "theme.json"
+}
