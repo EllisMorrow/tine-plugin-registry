@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.rose-pine",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-rose-pine-prism",
+  "commit": "a19693a892a2a384dc94c7f0e23d0b44ecb9e536",
+  "manifestPath": "theme.json"
+}
