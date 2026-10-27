@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.night-owl",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-night-owl-prism",
+  "commit": "b9d1a53a778cd6ec930ab4e6b13ec75c8064d342",
+  "manifestPath": "theme.json"
+}
