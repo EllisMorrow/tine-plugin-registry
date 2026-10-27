@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:18:38.904222+00:00",
+  "generatedAt": "2026-10-27T15:18:49.408397+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -616,6 +616,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:18:38.904183+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Monokai-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.monokai",
+      "license": "MIT",
+      "name": "Monokai · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-monokai-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:25:31.167Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "e453986edc214e2283b5b8fb152485bfd222eea3606587313705466209841160",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.monokai/0.1.1.json"
+          },
+          "manifestSha256": "a1a59f11cebf27a801a2ac5132a36ed4e6842447fb9af33cdc31e002066a0f7a",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.monokai/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:18:49.408387+00:00",
           "version": "0.1.1"
         }
       ]
