@@ -1,0 +1,75 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "A Day and Night pairing for Tine, carrying Tokyo Night's blue-gray daylight into its deep indigo evening.",
+  "id": "io.github.ellismorrow.theme.tokyo-night",
+  "license": "Apache-2.0",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#292E42",
+      "--ls-active-primary-color": "#7AA2F7",
+      "--ls-block-bullet-color": "#737AA2",
+      "--ls-block-highlight-color": "#292E42",
+      "--ls-border-color": "rgba(192, 202, 245, 0.14)",
+      "--ls-guideline-color": "rgba(192, 202, 245, 0.2)",
+      "--ls-link-text-color": "#7AA2F7",
+      "--ls-link-text-hover-color": "#C0CAF5",
+      "--ls-page-inline-code-bg-color": "#292E42",
+      "--ls-page-inline-code-color": "#C0CAF5",
+      "--ls-page-mark-bg-color": "#41425A",
+      "--ls-page-mark-color": "#E0AF68",
+      "--ls-primary-background-color": "#1A1B26",
+      "--ls-primary-text-color": "#C0CAF5",
+      "--ls-quaternary-background-color": "#3B4261",
+      "--ls-secondary-background-color": "#16161E",
+      "--ls-secondary-text-color": "#A9B1D6",
+      "--ls-selection-background-color": "#3B4261",
+      "--ls-tag-text-color": "#9ECE6A",
+      "--ls-tertiary-background-color": "#292E42",
+      "--ls-title-text-color": "#C0CAF5"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#E1E2E7",
+      "--ls-active-primary-color": "#2E7DE9",
+      "--ls-block-bullet-color": "#6172B0",
+      "--ls-block-highlight-color": "#D0D5E3",
+      "--ls-border-color": "rgba(55, 96, 191, 0.18)",
+      "--ls-guideline-color": "rgba(55, 96, 191, 0.22)",
+      "--ls-link-text-color": "#245EB0",
+      "--ls-link-text-hover-color": "#3760BF",
+      "--ls-page-inline-code-bg-color": "#E1E2E7",
+      "--ls-page-inline-code-color": "#3760BF",
+      "--ls-page-mark-bg-color": "#EEE1C8",
+      "--ls-page-mark-color": "#4E619D",
+      "--ls-primary-background-color": "#E1E2E7",
+      "--ls-primary-text-color": "#3760BF",
+      "--ls-quaternary-background-color": "#B7C1E3",
+      "--ls-secondary-background-color": "#D0D5E3",
+      "--ls-secondary-text-color": "#4E619D",
+      "--ls-selection-background-color": "#B7C1E3",
+      "--ls-tag-text-color": "#4D682F",
+      "--ls-tertiary-background-color": "#C4C8DA",
+      "--ls-title-text-color": "#3760BF"
+    }
+  },
+  "name": "Tokyo Night · Prism",
+  "portedFrom": {
+    "authors": [
+      "Folke Lemaitre"
+    ],
+    "ecosystem": "other",
+    "license": "Apache-2.0",
+    "name": "Tokyo Night Day / Night",
+    "relationship": "behavioral-port",
+    "revision": "545d72cde6400835d895160ecb5853874fd5156d",
+    "source": "https://github.com/folke/tokyonight.nvim"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-tokyo-night-prism/a663d6c6af54200f13e4b69a89465d085ed43034/docs/tokyo-night-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-tokyo-night-prism/a663d6c6af54200f13e4b69a89465d085ed43034/docs/tokyo-night-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-tokyo-night-prism",
+  "version": "0.1.1"
+}

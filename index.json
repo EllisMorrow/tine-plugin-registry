@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:17:39.880271+00:00",
+  "generatedAt": "2026-10-27T15:17:49.251233+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -616,6 +616,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:17:00.805251+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A Day and Night pairing for Tine, carrying Tokyo Night's blue-gray daylight into its deep indigo evening.",
+      "id": "io.github.ellismorrow.theme.tokyo-night",
+      "license": "Apache-2.0",
+      "name": "Tokyo Night · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-tokyo-night-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:55:04.726Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "a5fabdf01ad1c3efb3fa174eab20a03834c55c008c6e7ec0e4f4110b5c71b22c",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.tokyo-night/0.1.1.json"
+          },
+          "manifestSha256": "f2e71a4b28705b532bdfe55c2146a1b9dcafc4eacf47f7090ca9f96271c6229f",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.tokyo-night/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:17:49.251225+00:00",
           "version": "0.1.1"
         }
       ]

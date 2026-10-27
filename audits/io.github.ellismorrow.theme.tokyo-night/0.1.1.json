@@ -1,0 +1,80 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Malicious intent and deceptive behavior",
+      "Manifest and documentation consistency",
+      "Literal color payload and host execution boundary",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "License and upstream provenance",
+      "Testing, screenshots and accessibility claims",
+      "Graph transformations and protocol abuse applicability"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "CHANGELOG.md describes release 0.1.1 as having an MIT license, while theme.json, LICENSE and both READMEs specify Apache-2.0. The supplied upstream license is Apache-2.0.",
+        "impact": "The release documentation gives inconsistent redistribution guidance and should be corrected.",
+        "severity": "low",
+        "title": "Conflicting license statements"
+      },
+      {
+        "evidence": "The READMEs and docs/screenshots.md claim completed Windows testing and real screenshots, but docs/adaptation.md says user screenshots and full interaction acceptance are pending. Neither screenshot images nor the Chromium fixture and its output are included.",
+        "impact": "The supplied checker report supports format validation, but the application-testing, screenshot authenticity and contrast-test claims remain unverified.",
+        "severity": "low",
+        "title": "Screenshot and testing claims cannot be established"
+      },
+      {
+        "evidence": "theme.json supplies 21 hex or rgba literal color values per mode. No dependencies, lifecycle scripts, graph operations or executable entry points appear in the supplied theme files. Upstream CSS and installation examples are reference material that the stated host does not execute.",
+        "impact": "No execution, graph modification, protocol abuse, denial-of-service mechanism or hidden data channel is evident within the supplied theme payload.",
+        "severity": "info",
+        "title": "No executable theme payload identified"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest appears inert and contains only literal semantic colors, with no evident malicious behavior. Conflicting documentation and missing evidence leave licensing and validation claims unclear.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:55:04.726Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "ed410579498f4e4081dfb9774b944b0170c905a2948df0b30cbcb23ffa45b0e3",
+      "sourceCommit": "091b6a0968beb7676dee79c78b72975aef9f9e2f"
+    },
+    "risk": "low",
+    "sha256": "ed410579498f4e4081dfb9774b944b0170c905a2948df0b30cbcb23ffa45b0e3",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.tokyo-night",
+      "name": "Tokyo Night · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "091b6a0968beb7676dee79c78b72975aef9f9e2f",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:17:49.250535+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "b35d7a135affd1b979fd5b3f701e9c6b859efebc",
+    "number": 18
+  },
+  "submission": {
+    "commit": "091b6a0968beb7676dee79c78b72975aef9f9e2f",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.tokyo-night",
+    "repository": "https://github.com/EllisMorrow/tine-theme-tokyo-night-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
