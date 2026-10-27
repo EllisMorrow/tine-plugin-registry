@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.vscode-plus",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-vscode-plus-prism",
+  "commit": "50a3e8c60a10bb438948540ad43eb55aaf93a79a",
+  "manifestPath": "theme.json"
+}
