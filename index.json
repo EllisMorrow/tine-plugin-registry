@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:19:08.177183+00:00",
+  "generatedAt": "2026-10-27T15:19:19.210702+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -796,6 +796,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:16:51.206640+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Oscurange-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.oscurange",
+      "license": "MIT",
+      "name": "Oscurange · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-oscurange-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:40:51.496Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "955b4b09ccc5920c896e7d2e0e277e9cf7b26c2c86337a3475575b1adcb9a1cf",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.oscurange/0.1.1.json"
+          },
+          "manifestSha256": "a01355fac5fdfa5f22a690d6ab766c704fddabed6d05d1c52296e7510a7dde92",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.oscurange/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:19:19.210691+00:00",
           "version": "0.1.1"
         }
       ]
