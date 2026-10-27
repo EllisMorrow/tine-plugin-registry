@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.oscurange",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-oscurange-prism",
+  "commit": "1f52c61905ce69637890827e34ee7e637144a2b4",
+  "manifestPath": "theme.json"
+}
