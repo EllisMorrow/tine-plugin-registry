@@ -1,0 +1,75 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Literal color allowlist and inert host execution model",
+      "Malicious intent and deceptive behavior",
+      "Manifest and documentation consistency",
+      "Dependency and build-script risk",
+      "Denial of service and hidden data channels",
+      "External metadata and image URLs",
+      "License notices and pinned provenance",
+      "Testing and accessibility claim support",
+      "Graph transformations and protocol abuse: not applicable to this inert theme"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "READMEs and docs/screenshots.md assert real, unedited Windows captures, but image contents and fixture code/results are absent. docs/adaptation.md still says user screenshots and full interaction acceptance are pending.",
+        "impact": "Actual application coverage and screenshot authenticity cannot be assessed; documentation gives inconsistent validation status.",
+        "severity": "low",
+        "title": "Screenshot and testing claims are incompletely supported"
+      },
+      {
+        "evidence": "The pinned upstream LICENSE and README are supplied, but the referenced palette.md is absent. The claimed Codex palette pairing is also unsupported by supplied source.",
+        "impact": "MIT notice preservation is supported, but exact palette derivation and product-pairing claims remain unverified.",
+        "severity": "low",
+        "title": "Palette provenance cannot be fully verified"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors and shows no executable payload or malicious behavior. Quarantine is warranted because the bundle does not substantiate several provenance and testing claims.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:00:05.397Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "313ebeb0397a5ece57b3540ad37ecd1d4e455e92f0aae1260795058675cf23a6",
+      "sourceCommit": "a8cb48ec5e07f88df03b313588a7dbe176ae2ac9"
+    },
+    "risk": "low",
+    "sha256": "313ebeb0397a5ece57b3540ad37ecd1d4e455e92f0aae1260795058675cf23a6",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.everforest",
+      "name": "Everforest · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "a8cb48ec5e07f88df03b313588a7dbe176ae2ac9",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:16:10.707507+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "481073c9c1f08595ff4b2f7a90777e4a44439dd7",
+    "number": 7
+  },
+  "submission": {
+    "commit": "a8cb48ec5e07f88df03b313588a7dbe176ae2ac9",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.everforest",
+    "repository": "https://github.com/EllisMorrow/tine-theme-everforest-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}

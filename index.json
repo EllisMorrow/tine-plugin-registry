@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:15:55.309384+00:00",
+  "generatedAt": "2026-10-27T15:16:10.708163+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -316,6 +316,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:15:45.297983+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "A paired light and dark Tine palette drawn from Everforest's warm forest greens, muted stone surfaces and quiet natural accents.",
+      "id": "io.github.ellismorrow.theme.everforest",
+      "license": "MIT",
+      "name": "Everforest · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-everforest-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:00:05.397Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "c549b3b0957aae144af9a8869c52fe474968d68c3155e65453ebff43efd43f91",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.everforest/0.1.1.json"
+          },
+          "manifestSha256": "48969f933e4f91075e067cd567a0f175109c41e7b77497babc3b2933d7a167f7",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.everforest/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:16:10.708154+00:00",
           "version": "0.1.1"
         }
       ]

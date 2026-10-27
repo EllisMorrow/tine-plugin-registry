@@ -1,0 +1,77 @@
+{
+  "aiDevelopment": "primary",
+  "apiVersion": "0.2",
+  "author": "EllisMorrow",
+  "description": "A paired light and dark Tine palette drawn from Everforest's warm forest greens, muted stone surfaces and quiet natural accents.",
+  "id": "io.github.ellismorrow.theme.everforest",
+  "license": "MIT",
+  "modes": {
+    "dark": {
+      "--ls-a-chosen-bg": "#425047",
+      "--ls-active-primary-color": "#A7C080",
+      "--ls-block-bullet-color": "#9DA9A0",
+      "--ls-block-highlight-color": "#425047",
+      "--ls-border-color": "rgba(211, 198, 170, 0.14)",
+      "--ls-guideline-color": "rgba(211, 198, 170, 0.2)",
+      "--ls-link-text-color": "#7FBBB3",
+      "--ls-link-text-hover-color": "#D3C6AA",
+      "--ls-page-inline-code-bg-color": "#3D484D",
+      "--ls-page-inline-code-color": "#D3C6AA",
+      "--ls-page-mark-bg-color": "#4D4C43",
+      "--ls-page-mark-color": "#DBBC7F",
+      "--ls-primary-background-color": "#2D353B",
+      "--ls-primary-text-color": "#D3C6AA",
+      "--ls-quaternary-background-color": "#3D484D",
+      "--ls-secondary-background-color": "#232A2E",
+      "--ls-secondary-text-color": "#A7B0A0",
+      "--ls-selection-background-color": "#425047",
+      "--ls-tag-text-color": "#A7C080",
+      "--ls-tertiary-background-color": "#343F44",
+      "--ls-title-text-color": "#D3C6AA"
+    },
+    "light": {
+      "--ls-a-chosen-bg": "#EAEDC8",
+      "--ls-active-primary-color": "#8DA101",
+      "--ls-block-bullet-color": "#829181",
+      "--ls-block-highlight-color": "#EAEDC8",
+      "--ls-border-color": "rgba(92, 106, 114, 0.18)",
+      "--ls-guideline-color": "rgba(92, 106, 114, 0.22)",
+      "--ls-link-text-color": "#286983",
+      "--ls-link-text-hover-color": "#4A5D62",
+      "--ls-page-inline-code-bg-color": "#F4F0D9",
+      "--ls-page-inline-code-color": "#5C6A72",
+      "--ls-page-mark-bg-color": "#FAEDCD",
+      "--ls-page-mark-color": "#5C6A72",
+      "--ls-primary-background-color": "#FDF6E3",
+      "--ls-primary-text-color": "#5C6A72",
+      "--ls-quaternary-background-color": "#E6E2CC",
+      "--ls-secondary-background-color": "#F4F0D9",
+      "--ls-secondary-text-color": "#68767D",
+      "--ls-selection-background-color": "#E1E4BD",
+      "--ls-tag-text-color": "#5D7410",
+      "--ls-tertiary-background-color": "#EFEBD4",
+      "--ls-title-text-color": "#5C6A72"
+    }
+  },
+  "name": "Everforest · Prism",
+  "portedFrom": {
+    "authors": [
+      "Sainnhe Park",
+      "Jef LeCompte",
+      "Antoine Cotten"
+    ],
+    "ecosystem": "other",
+    "license": "MIT",
+    "name": "Everforest Light / Dark Medium",
+    "relationship": "behavioral-port",
+    "revision": "85a86eb62409e3ec88713bff3d1b9d7374e112e4",
+    "source": "https://github.com/sainnhe/everforest"
+  },
+  "schemaVersion": 1,
+  "screenshots": [
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-everforest-prism/75b6466529311f2acdc64301f97a3d23e76ec236/docs/everforest-dark.png",
+    "https://raw.githubusercontent.com/EllisMorrow/tine-theme-everforest-prism/75b6466529311f2acdc64301f97a3d23e76ec236/docs/everforest-light.png"
+  ],
+  "source": "https://github.com/EllisMorrow/tine-theme-everforest-prism",
+  "version": "0.1.1"
+}
