@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:18:58.883609+00:00",
+  "generatedAt": "2026-10-27T15:19:08.177183+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -736,6 +736,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:18:58.883593+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark OG-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.og",
+      "license": "MIT",
+      "name": "OG · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-og-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T13:35:06.977Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "292c68d2af8c6c2caf8ccbad3eb75edf28e63ebad9ac8619abc460bcae3e6522",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.og/0.1.1.json"
+          },
+          "manifestSha256": "cb5c38c9b28516a375641b0d2461c5b588f75af962108e236cfeaeb3d64b01df",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.og/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:19:08.177174+00:00",
           "version": "0.1.1"
         }
       ]

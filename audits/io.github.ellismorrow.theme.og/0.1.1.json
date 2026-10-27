@@ -1,0 +1,74 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest and documentation consistency",
+      "Literal color values and host execution restrictions",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script exposure",
+      "Denial of service and hidden data channels",
+      "External URLs and pinned screenshot references",
+      "License and provenance",
+      "Scope and support for validation claims"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The README and adaptation notes explicitly state that the original upstream source of the referenced Codex preset has not been independently established.",
+        "impact": "The package includes an MIT license, but the supplied material does not fully establish the provenance of the referenced palette.",
+        "severity": "low",
+        "title": "Upstream provenance remains unresolved"
+      },
+      {
+        "evidence": "Documentation claims real, unedited Windows screenshots and Chromium fixture results, but the supplied bundle contains neither the images nor fixture source or execution records. The deterministic report establishes format-check success only.",
+        "impact": "Visual authenticity, screenshot privacy, and broader testing claims remain unverified.",
+        "severity": "low",
+        "title": "Screenshot and fixture claims cannot be independently assessed"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest is an inert, literal-color theme consistent with the checker report. No malicious behavior is evident, but provenance and supporting verification materials remain incomplete.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T13:35:06.977Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "32e92187352ac7406eaaa252cfa03da78781058d0f7ecd01b2adb91777d2d52b",
+      "sourceCommit": "322e79d563b8678a8fe6b71e142aef30101dd2f9"
+    },
+    "risk": "low",
+    "sha256": "32e92187352ac7406eaaa252cfa03da78781058d0f7ecd01b2adb91777d2d52b",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.og",
+      "name": "OG · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "322e79d563b8678a8fe6b71e142aef30101dd2f9",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "approvedAt": "2026-10-27T15:19:08.176438+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; the review was uncertain only about README screenshot/provenance claims it cannot verify (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "b098d26181e8819ff58a897e4b28fcda64982f09",
+    "number": 26
+  },
+  "submission": {
+    "commit": "322e79d563b8678a8fe6b71e142aef30101dd2f9",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.og",
+    "repository": "https://github.com/EllisMorrow/tine-theme-og-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
