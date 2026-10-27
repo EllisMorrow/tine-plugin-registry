@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:17:12.028800+00:00",
+  "generatedAt": "2026-10-27T15:17:21.654159+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -260,6 +260,36 @@
   "revocations": [],
   "schemaVersion": 1,
   "themes": [
+    {
+      "aiDevelopment": "primary",
+      "description": "A paired Ayu Light and Ayu Dark palette for Tine, balancing bright paper, quiet graphite surfaces and warm amber accents.",
+      "id": "io.github.ellismorrow.theme.ayu",
+      "license": "MIT",
+      "name": "Ayu · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-ayu-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T12:05:25.257Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "3dd4f94faab63edb528f076078a19640f36908b3642809770e7f7bd0af9e1d67",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.ayu/0.1.1.json"
+          },
+          "manifestSha256": "7272699e6cf0bf540b1e89c2c665fb0a33daae65a02fcf7f6bd3940f7a1f9afa",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.ayu/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:17:21.654150+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
     {
       "aiDevelopment": "primary",
       "description": "A complete Latte and Mocha palette pair for Tine, with soft cream and blue-night surfaces, lavender accents, blue links and warm highlights.",

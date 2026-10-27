@@ -1,0 +1,77 @@
+{
+  "aiReview": {
+    "areasReviewed": [
+      "Manifest and source consistency",
+      "Literal color allowlist and inert host execution boundary",
+      "Malicious intent and deceptive behavior",
+      "Dependency and build-script exposure",
+      "Denial of service and hidden data channels",
+      "License and provenance evidence",
+      "Validation and screenshot claims",
+      "External metadata URLs"
+    ],
+    "disposition": "quarantine",
+    "findings": [
+      {
+        "evidence": "The bundle omits upstream palette definitions and the upstream license text, screenshot images, and Chromium fixture implementation. The deterministic report supports format validation but does not establish those additional claims.",
+        "impact": "Exact upstream attribution, screenshot authenticity, and reported contrast and interaction results remain unverified. Upstream build scripts reference omitted source files, although the inert theme does not require executing them.",
+        "severity": "medium",
+        "title": "Incomplete evidence for provenance and validation claims"
+      },
+      {
+        "evidence": "docs/adaptation.md says user screenshots are pending, while the READMEs and docs/screenshots.md say screenshots were supplied after testing.",
+        "impact": "Conflicting documentation makes the extent of completed application testing unclear.",
+        "severity": "low",
+        "title": "Screenshot testing status is inconsistent"
+      }
+    ],
+    "schemaVersion": 1,
+    "summary": "The manifest contains only literal colors and shows no malicious runtime behavior. Quarantine is warranted because provenance and validation claims cannot be fully verified from the supplied bundle.",
+    "uncertain": true
+  },
+  "checker": {
+    "checkedAt": "2026-10-27T12:05:25.257Z",
+    "errors": [],
+    "format": "tine-theme-check/v1",
+    "provenance": {
+      "buildNetwork": "not-applicable",
+      "dependencyFetchHadNoCredentials": true,
+      "manifestLoadedFromThatCheckout": true,
+      "manifestSha256": "be453bc6dfdba0e4318c8e43a074aba5f7c252ca9e25cb15e4514cba2fdb9203",
+      "sourceCommit": "fdf36e8c1c71c9a5f76e8e8fb47c0d43924ba351"
+    },
+    "risk": "low",
+    "sha256": "be453bc6dfdba0e4318c8e43a074aba5f7c252ca9e25cb15e4514cba2fdb9203",
+    "status": "passed",
+    "theme": {
+      "id": "io.github.ellismorrow.theme.ayu",
+      "name": "Ayu · Prism",
+      "version": "0.1.1"
+    },
+    "warnings": []
+  },
+  "commitVerified": "fdf36e8c1c71c9a5f76e8e8fb47c0d43924ba351",
+  "disposition": "quarantine",
+  "format": "tine-package-audit-result/v1",
+  "manualApproval": {
+    "acceptedFindings": [
+      "Incomplete evidence for provenance and validation claims"
+    ],
+    "approvedAt": "2026-10-27T15:17:21.653473+00:00",
+    "by": "Claude (working on Martin's behalf)",
+    "note": "Inert colour theme; accepted medium finding(s) about unverifiable upstream provenance/claims, not about the colours (D-20261027-TH)."
+  },
+  "pullRequest": {
+    "head": "b8346e82850caedfcc6bb358a46506a01d7b5b9b",
+    "number": 15
+  },
+  "submission": {
+    "commit": "fdf36e8c1c71c9a5f76e8e8fb47c0d43924ba351",
+    "kind": "theme",
+    "manifestPath": "theme.json",
+    "packageId": "io.github.ellismorrow.theme.ayu",
+    "repository": "https://github.com/EllisMorrow/tine-theme-ayu-prism",
+    "schemaVersion": 2,
+    "version": "0.1.1"
+  }
+}
