@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:19:39.229409+00:00",
+  "generatedAt": "2026-10-27T15:19:47.611107+00:00",
   "plugins": [
     {
       "aiDevelopment": "primary",
@@ -916,6 +916,36 @@
             "light"
           ],
           "publishedAt": "2026-10-27T15:16:23.588535+00:00",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "aiDevelopment": "primary",
+      "description": "Independently mapped light and dark Sentry-inspired palettes for Tine.",
+      "id": "io.github.ellismorrow.theme.sentry",
+      "license": "MIT",
+      "name": "Sentry · Prism",
+      "source": "https://github.com/EllisMorrow/tine-theme-sentry-prism",
+      "versions": [
+        {
+          "apiVersion": "0.2",
+          "audit": {
+            "automatedDisposition": "quarantine",
+            "checkedAt": "2026-10-27T14:25:41.139Z",
+            "manualApproval": true,
+            "risk": "low",
+            "sha256": "b056be5bd57fe442004c098e93d8a3cfac4f9e980e65d738603f9f4f3f3c7c8b",
+            "status": "passed",
+            "url": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/audits/io.github.ellismorrow.theme.sentry/0.1.1.json"
+          },
+          "manifestSha256": "555f509da92be997b5f2690af63a8b76f5a804021ce89bdd21a345a4cc83dd1e",
+          "manifestUrl": "https://raw.githubusercontent.com/martinkoutecky/tine-plugin-registry/main/themes/io.github.ellismorrow.theme.sentry/0.1.1/theme.json",
+          "modes": [
+            "dark",
+            "light"
+          ],
+          "publishedAt": "2026-10-27T15:19:47.611097+00:00",
           "version": "0.1.1"
         }
       ]
