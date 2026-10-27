@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.vercel",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-vercel-prism",
+  "commit": "cfa389be4cd12e986800203c8c879ac1400e4b71",
+  "manifestPath": "theme.json"
+}
