@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.solarized",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-solarized-prism",
+  "commit": "db8febac40f3237c2eebf410f15683a44ce094d8",
+  "manifestPath": "theme.json"
+}
