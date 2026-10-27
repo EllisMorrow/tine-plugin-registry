@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.everforest",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-everforest-prism",
+  "commit": "a8cb48ec5e07f88df03b313588a7dbe176ae2ac9",
+  "manifestPath": "theme.json"
+}
