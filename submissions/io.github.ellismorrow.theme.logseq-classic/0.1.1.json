@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "kind": "theme",
+  "packageId": "io.github.ellismorrow.theme.logseq-classic",
+  "version": "0.1.1",
+  "repository": "https://github.com/EllisMorrow/tine-theme-logseq-classic-prism",
+  "commit": "dcfcc506dca219c51485291c8aab440edca96fdc",
+  "manifestPath": "theme.json"
+}
